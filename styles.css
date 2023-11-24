@@ -1,21 +1,18 @@
-
-
-
-body {
+.container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-
 }
 
-.wrapper
-{
-    margin: 150px auto;
-    width: 90%;
+body { 
+    color: white; 
+   } 
 
-}
+   .container {
+    padding: 3vh;
+   }
 
-img {
-    max-width: 400px;
-}
+   .item-2
+ {
+    padding: 1em;
+ }
