@@ -10,7 +10,7 @@ body {
    } 
 
    .container {
-    padding: 3vh;
+    padding: 3vh 10vh 3vh 10vh;
    }
 
    .item-2
