@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
+  <link rel="icon" type="img/x-icon" href="img/favicon9.png">
+  <style>
+    /* Embed Traditional Arabic font (self-hosted) */
+    @font-face {
+      font-family: "Traditional Arabic";
+      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
+           url("fonts/TraditionalArabic.woff") format("woff"),
+           url("fonts/TraditionalArabic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Traditional Arabic", serif;
+      color: #f78f8f;
+      background-color: #000;
+    }
+
+    /* Banner container */
+    .banner {
+      position: relative;
+      height: 100vh;
+      background: url('fabric-bg.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Sticky top bar */
+    .top-bar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      z-index: 1000;
+    }
+
+    /* Make logo area fully clickable */
+    .logo-link {
+      display: inline-block;
+      height: 120px;      /* Matches logo height */
+      margin-right: 50px; /* Space before nav */
+    }
+
+    .site-logo {
+      height: 100%;
+      display: block;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-size: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f78f8f;
+      font-weight: bold;
+      letter-spacing: 1px;
+      position: relative;
+      font-family: inherit;
+    }
+
+    /* Underline animation */
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #f78f8f;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Center band image and text */
+    .banner-content img {
+      width: 60%;
+      max-width: 800px;
+      height: auto;
+      margin-bottom: 1rem;
+      margin-top: 180px;
+    }
+
+    .banner-content h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      color: #f78f8f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div class="top-bar">
+      <!-- Clickable logo links to homepage -->
+      <a href="/index.html" class="logo-link">
+        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
+      </a>
+<nav>
+  <a href="#">◊ BIO </a>
+  <a href="#">◊ MUSIC </a>
+  <a href="#">◊ GALLERY </a>
+  <a href="newsletter.html">◊ NEWSLETTER </a>
+</nav>
+    </div>
+
+    <div class="banner-content">
+      <img src="img/homeshoot1.png" alt="Band Photo">
+      <h1>yes yes lou mr pepper so spicy</h1>
+    </div>
+  </header>
+
+</body>
+</html>

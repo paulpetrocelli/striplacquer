@@ -17,3 +17,120 @@ body {
  {
     padding: 1em;
  }
+
+ .site-logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    height: 100px;
+  }
+  
+  h1 {
+    font-family: "Georgia";
+}
+
+@font-face {
+  font-family: "Traditional Arabic Regular";
+  src:
+    local("Traditional Arabic Regular"),
+    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+    url("trickster-outline.otf") format("opentype"),
+    url("trickster-outline.woff") format("woff");
+}
+
+/* Newsletter Page Layout */
+.newsletter-container {
+  width: 400px;
+  max-width: 400px;
+  margin: 100px auto; /* Centers vertically with space from top */
+  padding: 30px;
+  border: 2px solid #d4af37; /* Gold border like your site */
+  background: transparent;   /* Keep background see-through */
+  text-align: center;
+  font-family: "Traditional Arabic", serif;
+  color: #fff; /* White text (adjust if your site uses another color) */
+}
+
+.newsletter-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  font-family: "Traditional Arabic", serif;
+  text-align: center;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #d4af37;
+  opacity: 0.8;
+}
+
+.newsletter-form button {
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #d4af37;
+  border-radius: 4px;
+  background: transparent;
+  color: #d4af37;
+  cursor: pointer;
+  font-family: "Traditional Arabic", serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* Newsletter Page Layout */
+.newsletter-container {
+  width: 400px;
+  max-width: 400px;
+  margin: 100px auto; /* Centers vertically with space from top */
+  padding: 30px;
+  border: 2px solid #d4af37; /* Gold border like your site */
+  background: transparent;   /* Keep background see-through */
+  text-align: center;
+  font-family: "Traditional Arabic", serif;
+  color: #fff; /* White text (adjust if your site uses another color) */
+}
+
+.newsletter-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  font-family: "Traditional Arabic", serif;
+  text-align: center;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #d4af37;
+  opacity: 0.8;
+}
