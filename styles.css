@@ -94,3 +94,65 @@ body {
   background: #f78f8f;
   color: #000;
 }
+
+
+/* Newsletter container box */
+.newsletter-container {
+  width: 400px;
+  max-width: 400px;
+  margin: 150px auto 0 auto;  /* Centers horizontally with space from top */
+  padding: 30px;
+  border: 2px solid #f78f8f;  /* Pink border like categories/nav */
+  background: transparent;
+  text-align: center;
+  font-family: "Traditional Arabic", serif;
+  color: #f78f8f;
+}
+
+/* Newsletter title */
+.newsletter-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Form layout */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Email input */
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #f78f8f;
+  border-radius: 4px;
+  background: transparent;
+  color: #f78f8f;
+  text-align: center;
+  font-family: "Traditional Arabic", serif;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #f78f8f;
+  opacity: 0.8;
+}
+
+/* Submit button */
+.newsletter-form button {
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #f78f8f;
+  border-radius: 4px;
+  background: transparent;
+  color: #f78f8f;
+  cursor: pointer;
+  font-family: "Traditional Arabic", serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #f78f8f;
+  color: #000;
+}
