@@ -5,108 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
   <link rel="icon" type="img/x-icon" href="img/favicon9.png">
+  <link rel="stylesheet" href="styles.css"> <!-- Your site CSS -->
   <style>
-    /* Embed Traditional Arabic font (self-hosted) */
-    @font-face {
-      font-family: "Traditional Arabic";
-      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-           url("fonts/TraditionalArabic.woff") format("woff"),
-           url("fonts/TraditionalArabic.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    body {
-      margin: 0;
+    /* Newsletter page specific styles */
+    .newsletter-container {
+      width: 400px;
+      max-width: 400px;
+      margin: 150px auto 0 auto;
+      padding: 30px;
+      border: 2px solid #f78f8f;  /* Matches your category/nav pink */
+      background: transparent;
+      text-align: center;
       font-family: "Traditional Arabic", serif;
       color: #f78f8f;
-      background-color: #000;
     }
-
-    /* Banner container */
-    .banner {
-      position: relative;
-      height: 100vh;
-      background: url('fabric-bg.jpg') center/cover no-repeat;
+    .newsletter-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .newsletter-form {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      gap: 15px;
+    }
+    .newsletter-form input[type="email"] {
+      padding: 10px;
+      font-size: 18px;
+      border: 1px solid #f78f8f;
+      border-radius: 4px;
+      background: transparent;
+      color: #f78f8f;
       text-align: center;
+      font-family: "Traditional Arabic", serif;
     }
-
-    /* Sticky top bar */
-    .top-bar {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0 30px;
-      z-index: 1000;
-    }
-
-    /* Make logo area fully clickable */
-    .logo-link {
-      display: inline-block;
-      height: 120px;      /* Matches logo height */
-      margin-right: 50px; /* Space before nav */
-    }
-
-    .site-logo {
-      height: 100%;
-      display: block;
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      gap: 2rem;
-      font-size: 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
+    .newsletter-form input[type="email"]::placeholder {
       color: #f78f8f;
-      font-weight: bold;
-      letter-spacing: 1px;
-      position: relative;
-      font-family: inherit;
+      opacity: 0.8;
     }
-
-    /* Underline animation */
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background-color: #f78f8f;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    /* Center band image and text */
-    .banner-content img {
-      width: 60%;
-      max-width: 800px;
-      height: auto;
-      margin-bottom: 1rem;
-      margin-top: 180px;
-    }
-
-    .banner-content h1 {
-      font-size: 2rem;
-      font-weight: normal;
+    .newsletter-form button {
+      padding: 12px;
+      font-size: 18px;
+      border: 2px solid #f78f8f;
+      border-radius: 4px;
+      background: transparent;
       color: #f78f8f;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-family: inherit;
+      cursor: pointer;
+      font-family: "Traditional Arabic", serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    .newsletter-form button:hover {
+      background: #f78f8f;
+      color: #000;
     }
   </style>
 </head>
@@ -118,12 +67,12 @@
       <a href="/index.html" class="logo-link">
         <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
       </a>
-<nav>
-  <a href="/bio.html">◊ BIO </a>
-  <a href="/music.html">◊ MUSIC </a>
-  <a href="/gallery.html">◊ GALLERY </a>
-  <a href="newsletter.html">◊ NEWSLETTER </a>
-</nav>
+      <nav>
+        <a href="/bio.html">◊ BIO </a>
+        <a href="/music.html">◊ MUSIC </a>
+        <a href="/gallery.html">◊ GALLERY </a>
+        <a href="newsletter.html" class="active">◊ NEWSLETTER </a>
+      </nav>
     </div>
   </header>
 
@@ -132,7 +81,7 @@
     <section class="newsletter-container">
       <h1 class="newsletter-title">Sign Up for Our Newsletter</h1>
       
-      <!-- MailerLite Form (stripped down) -->
+      <!-- MailerLite Form (replace the action URL below with your real one) -->
       <form action="https://assets.mlcdn.com/fonts.css?version=1753253" method="post" class="newsletter-form">
         <input type="email" name="fields[email]" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
@@ -142,4 +91,3 @@
 
 </body>
 </html>
-
