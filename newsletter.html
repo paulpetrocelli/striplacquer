@@ -5,19 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
   <link rel="icon" type="img/x-icon" href="img/favicon9.png">
-  <link rel="stylesheet" href="styles.css">
   <style>
+    /* Embed Traditional Arabic font (self-hosted) */
+    @font-face {
+      font-family: "Traditional Arabic";
+      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
+           url("fonts/TraditionalArabic.woff") format("woff"),
+           url("fonts/TraditionalArabic.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
       font-family: "Traditional Arabic", serif;
       color: #f78f8f;
       background-color: #000; /* No fabric background */
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
-    /* Top bar matches other pages */
+    /* Banner container (keeps layout same as homepage) */
+    .banner {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Top bar (logo + nav) */
     .top-bar {
       position: fixed;
       top: 60px;
@@ -70,13 +87,12 @@
       width: 100%;
     }
 
-    /* Centered newsletter container */
+    /* Newsletter box replaces the image area */
     .newsletter-container {
-      margin: auto;
-      margin-top: 220px; /* Matches other pages' spacing under header */
       max-width: 400px;
-      width: 90%; /* Scales down for smaller screens */
+      width: 90%;
       padding: 30px;
+      margin-top: 180px; /* Matches the visual spacing of homepage image */
       border: 2px solid #f78f8f;
       background: transparent;
       text-align: center;
@@ -129,7 +145,6 @@
       color: #000;
     }
 
-    /* Responsive tweaks */
     @media (max-width: 500px) {
       .newsletter-title {
         font-size: 1.4rem;
@@ -139,8 +154,9 @@
 </head>
 <body>
 
-  <header>
+  <header class="banner">
     <div class="top-bar">
+      <!-- Logo (clickable to homepage) -->
       <a href="/index.html" class="logo-link">
         <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
       </a>
@@ -151,10 +167,8 @@
         <a href="newsletter.html" class="active">◊ NEWSLETTER </a>
       </nav>
     </div>
-  </header>
 
-  <!-- Newsletter signup -->
-  <main>
+    <!-- Newsletter form replaces image -->
     <section class="newsletter-container">
       <h1 class="newsletter-title">Sign Up for Our Newsletter</h1>
       <form action="https://assets.mlcdn.com/fonts.css?version=1753253" method="post" class="newsletter-form">
@@ -162,7 +176,7 @@
         <button type="submit">Subscribe</button>
       </form>
     </section>
-  </main>
+  </header>
 
 </body>
 </html>
