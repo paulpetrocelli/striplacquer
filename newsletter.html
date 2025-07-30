@@ -6,7 +6,6 @@
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
   <link rel="icon" type="img/x-icon" href="img/favicon9.png">
   <style>
-    /* Embed Traditional Arabic font (self-hosted) */
     @font-face {
       font-family: "Traditional Arabic";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
@@ -20,10 +19,9 @@
       margin: 0;
       font-family: "Traditional Arabic", serif;
       color: #f78f8f;
-      background-color: #000; /* No fabric background */
+      background-color: #000;
     }
 
-    /* Banner container (keeps layout same as homepage) */
     .banner {
       position: relative;
       height: 100vh;
@@ -34,7 +32,6 @@
       text-align: center;
     }
 
-    /* Top bar (logo + nav) */
     .top-bar {
       position: fixed;
       top: 60px;
@@ -87,12 +84,11 @@
       width: 100%;
     }
 
-    /* Newsletter box replaces the image area */
     .newsletter-container {
       max-width: 400px;
       width: 90%;
       padding: 30px;
-      margin-top: 180px; /* Matches the visual spacing of homepage image */
+      margin-top: 180px;
       border: 2px solid #f78f8f;
       background: transparent;
       text-align: center;
@@ -145,10 +141,10 @@
       color: #000;
     }
 
-    @media (max-width: 500px) {
-      .newsletter-title {
-        font-size: 1.4rem;
-      }
+    .success-message {
+      font-size: 1.5rem;
+      margin-top: 15px;
+      display: none;
     }
   </style>
 </head>
@@ -156,7 +152,6 @@
 
   <header class="banner">
     <div class="top-bar">
-      <!-- Logo (clickable to homepage) -->
       <a href="/index.html" class="logo-link">
         <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
       </a>
@@ -168,15 +163,44 @@
       </nav>
     </div>
 
-    <!-- Newsletter form replaces image -->
     <section class="newsletter-container">
-      <h1 class="newsletter-title">Newsletter Sign Up</h1>
-      <form action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe" method="post" class="newsletter-form">
+      <h1 class="newsletter-title">Sign Up for Our Newsletter</h1>
+      <form id="newsletterForm" action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe" method="post" class="newsletter-form">
         <input type="email" name="fields[email]" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
+      <div id="successMessage" class="success-message">Success</div>
     </section>
   </header>
+
+  <script>
+    const form = document.getElementById('newsletterForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Stop normal form submission
+
+      const formData = new FormData(form);
+      const actionUrl = form.getAttribute('action');
+
+      try {
+        const response = await fetch(actionUrl, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          // Hide the input and button, show success text
+          form.style.display = 'none';
+          successMessage.style.display = 'block';
+        } else {
+          alert('There was an issue subscribing. Please try again.');
+        }
+      } catch (error) {
+        alert('Network error. Please try again.');
+      }
+    });
+  </script>
 
 </body>
 </html>
