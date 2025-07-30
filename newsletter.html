@@ -7,14 +7,17 @@
   <link rel="icon" type="img/x-icon" href="img/favicon9.png">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Page background and layout */
     body {
       margin: 0;
       font-family: "Traditional Arabic", serif;
       color: #f78f8f;
+      background-color: #000; /* No fabric background */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    /* Header and navigation bar */
+    /* Top bar matches other pages */
     .top-bar {
       position: fixed;
       top: 60px;
@@ -67,21 +70,22 @@
       width: 100%;
     }
 
-    /* Newsletter box styling */
+    /* Centered newsletter container */
     .newsletter-container {
-      width: 400px;
+      margin: auto;
+      margin-top: 220px; /* Matches other pages' spacing under header */
       max-width: 400px;
-      margin: 220px auto 0 auto; /* Spaces it below the logo/nav */
+      width: 90%; /* Scales down for smaller screens */
       padding: 30px;
       border: 2px solid #f78f8f;
       background: transparent;
       text-align: center;
-      font-family: "Traditional Arabic", serif;
       color: #f78f8f;
+      box-sizing: border-box;
     }
 
     .newsletter-title {
-      font-size: 28px;
+      font-size: 1.8rem;
       margin-bottom: 20px;
     }
 
@@ -93,13 +97,14 @@
 
     .newsletter-form input[type="email"] {
       padding: 10px;
-      font-size: 18px;
+      font-size: 1rem;
       border: 1px solid #f78f8f;
       border-radius: 4px;
       background: transparent;
       color: #f78f8f;
       text-align: center;
       font-family: "Traditional Arabic", serif;
+      box-sizing: border-box;
     }
 
     .newsletter-form input[type="email"]::placeholder {
@@ -109,7 +114,7 @@
 
     .newsletter-form button {
       padding: 12px;
-      font-size: 18px;
+      font-size: 1rem;
       border: 2px solid #f78f8f;
       border-radius: 4px;
       background: transparent;
@@ -122,6 +127,13 @@
     .newsletter-form button:hover {
       background: #f78f8f;
       color: #000;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 500px) {
+      .newsletter-title {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
@@ -141,7 +153,7 @@
     </div>
   </header>
 
-  <!-- Newsletter signup form -->
+  <!-- Newsletter signup -->
   <main>
     <section class="newsletter-container">
       <h1 class="newsletter-title">Sign Up for Our Newsletter</h1>
