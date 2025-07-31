@@ -250,7 +250,7 @@ h1 {
 @font-face {
 font-family: "Traditional Arabic Regular";
 src:
-  local("Traditional Arabic Regular"),
+  local("Traditional Arabic Regular Regular"),
   url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
   url("trickster-outline.otf") format("opentype"),
   url("trickster-outline.woff") format("woff");
@@ -265,7 +265,7 @@ padding: 30px;
 border: 2px solid #f78f8f; /* Gold border like your site */
 background: transparent;   /* Keep background see-through */
 text-align: center;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 color: #fff; /* White text (adjust if your site uses another color) */
 }
 
@@ -287,7 +287,7 @@ border: 1px solid #f78f8f;
 border-radius: 4px;
 background: transparent;
 color: #000000;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 text-align: center;
 }
 
@@ -304,7 +304,7 @@ border-radius: 4px;
 background: transparent;
 color: #f78f8f;
 cursor: pointer;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 transition: background 0.3s, color 0.3s;
 }
 
@@ -323,7 +323,7 @@ padding: 30px;
 border: 2px solid #f78f8f;  /* Pink border like categories/nav */
 background: transparent;
 text-align: center;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 color: #f78f8f;
 }
 
@@ -349,7 +349,7 @@ border-radius: 4px;
 background: transparent;
 color: #f78f8f;
 text-align: center;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 }
 
 .newsletter-form input[type="email"]::placeholder {
@@ -366,7 +366,7 @@ border-radius: 4px;
 background: transparent;
 color: #f78f8f;
 cursor: pointer;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 transition: background 0.3s, color 0.3s;
 }
 
@@ -406,7 +406,7 @@ max-width: 300px;
 font-size: 1.8rem;
 color: #f78f8f;
 margin-bottom: 1rem;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 }
 
 .link-button {
@@ -416,7 +416,7 @@ color: #f78f8f;
 font-size: 1.2rem;
 padding: 0.75rem 2rem;
 text-decoration: none;
-font-family: "Traditional Arabic", serif;
+font-family: "Traditional Arabic Regular", serif;
 border-radius: 5px;
 transition: all 0.3s ease;
 text-align: center;
