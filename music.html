@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="img/x-icon" href="img/favicon9.png">
+  <link rel="icon" type="img/x-icon" href="img/favicon9.png" />
   <style>
-    /* Embed Traditional Arabic font (self-hosted) */
     @font-face {
       font-family: "Traditional Arabic";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
            url("fonts/TraditionalArabic.woff") format("woff"),
            url("fonts/TraditionalArabic.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
     }
 
     body {
@@ -23,7 +20,6 @@
       background-color: #000;
     }
 
-    /* Banner container */
     .banner {
       position: relative;
       height: 100vh;
@@ -35,7 +31,6 @@
       text-align: center;
     }
 
-    /* Sticky top bar */
     .top-bar {
       position: fixed;
       top: 60px;
@@ -47,11 +42,10 @@
       z-index: 1000;
     }
 
-    /* Make logo area fully clickable */
     .logo-link {
       display: inline-block;
-      height: 120px;      /* Matches logo height */
-      margin-right: 50px; /* Space before nav */
+      height: 120px;
+      margin-right: 50px;
     }
 
     .site-logo {
@@ -59,7 +53,6 @@
       display: block;
     }
 
-    /* Navigation */
     nav {
       display: flex;
       gap: 2rem;
@@ -75,7 +68,6 @@
       font-family: inherit;
     }
 
-    /* Underline animation */
     nav a::after {
       content: "";
       position: absolute;
@@ -91,22 +83,39 @@
       width: 100%;
     }
 
-    /* Center band image and text */
-    .banner-content img {
-      width: 60%;
-      max-width: 800px;
-      height: auto;
-      margin-bottom: 1rem;
-      margin-top: 180px;
+    /* Buttons section */
+    .music-links {
+      margin-top: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      text-align: center;
     }
 
-    .banner-content h1 {
-      font-size: 2rem;
-      font-weight: normal;
+    .music-links h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
       color: #f78f8f;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
+    }
+
+    .link-button {
+      background-color: transparent;
+      border: 2px solid #f78f8f;
+      color: #f78f8f;
+      font-size: 1.2rem;
+      padding: 0.75rem 2rem;
+      text-decoration: none;
       font-family: inherit;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .link-button:hover {
+      background-color: #f78f8f;
+      color: #000;
     }
   </style>
 </head>
@@ -114,18 +123,33 @@
 
   <header class="banner">
     <div class="top-bar">
-      <!-- Clickable logo links to homepage -->
       <a href="/index.html" class="logo-link">
-        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
+        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
       </a>
       <nav>
         <a href="/bio.html">◊ BIO </a>
         <a href="/music.html">◊ MUSIC </a>
         <a href="/gallery.html">◊ GALLERY </a>
-        <a href="newsletter.html">◊ NEWSLETTER </a>
+        <a href="/newsletter.html">◊ NEWSLETTER </a>
       </nav>
     </div>
   </header>
+
+<!-- Music Platform Links - Horizontal Layout -->
+<section class="music-links">
+    <div class="music-container">
+      <div class="button-group">
+        <h2>Listen to Strip Lacquer</h2>
+        <a href="https://striplacquer.bandcamp.com/" target="_blank" class="link-button">Bandcamp</a>
+        <a href="https://www.youtube.com/@striplacquer" target="_blank" class="link-button">YouTube</a>
+        <a href="https://soundcloud.com/strip-lacquer" target="_blank" class="link-button">SoundCloud</a>
+      </div>
+      <div class="image-box">
+        <img src="img/temporary tapes.jpg" alt="Strip Lacquer Demo Tape" />
+      </div>
+    </div>
+  </section>
+  
 
 </body>
 </html>

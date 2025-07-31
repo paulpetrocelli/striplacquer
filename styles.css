@@ -156,3 +156,62 @@ body {
   background: #f78f8f;
   color: #000;
 }
+
+
+.music-links {
+  margin-top: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+  max-width: 300px;
+}
+
+.button-group h2 {
+  font-size: 1.8rem;
+  color: #f78f8f;
+  margin-bottom: 1rem;
+}
+
+.link-button {
+  background-color: transparent;
+  border: 2px solid #f78f8f;
+  color: #f78f8f;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  font-family: inherit;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.link-button:hover {
+  background-color: #f78f8f;
+  color: #000;
+}
+
+.image-box img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #f78f8f44;
+}
