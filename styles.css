@@ -157,30 +157,31 @@ body {
   color: #000;
 }
 
+
 .music-links {
   margin-top: 100vh;
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
 }
 
 .music-container {
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 3rem;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
+  justify-content: center;
 }
 
 .button-group {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: left;
   max-width: 300px;
 }
 
@@ -188,7 +189,6 @@ body {
   font-size: 1.8rem;
   color: #f78f8f;
   margin-bottom: 1rem;
-  font-family: "Traditional Arabic", serif;
 }
 
 .link-button {
@@ -198,7 +198,7 @@ body {
   font-size: 1.2rem;
   padding: 0.75rem 2rem;
   text-decoration: none;
-  font-family: "Traditional Arabic", serif;
+  font-family: inherit;
   border-radius: 5px;
   transition: all 0.3s ease;
   text-align: center;
@@ -210,9 +210,227 @@ body {
 }
 
 .image-box img {
-  width: 320px;
-  max-width: 100%;
+  width: 300px;
   height: auto;
-  border-radius: 6px;
-  box-shadow: 0 0 12px #f78f8f44;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #f78f8f44;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body { 
+  color: white; 
+ } 
+
+ .container {
+  padding: 3vh 10vh 3vh 10vh;
+ }
+
+ .item-2
+{
+  padding: 1em;
+}
+
+.site-logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  height: 100px;
+}
+
+h1 {
+  font-family: "Georgia";
+}
+
+@font-face {
+font-family: "Traditional Arabic Regular";
+src:
+  local("Traditional Arabic Regular"),
+  url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+  url("trickster-outline.otf") format("opentype"),
+  url("trickster-outline.woff") format("woff");
+}
+
+/* Newsletter Page Layout */
+.newsletter-container {
+width: 400px;
+max-width: 400px;
+margin: 100px auto; /* Centers vertically with space from top */
+padding: 30px;
+border: 2px solid #f78f8f; /* Gold border like your site */
+background: transparent;   /* Keep background see-through */
+text-align: center;
+font-family: "Traditional Arabic", serif;
+color: #fff; /* White text (adjust if your site uses another color) */
+}
+
+.newsletter-title {
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+.newsletter-form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.newsletter-form input[type="email"] {
+padding: 10px;
+font-size: 18px;
+border: 1px solid #f78f8f;
+border-radius: 4px;
+background: transparent;
+color: #000000;
+font-family: "Traditional Arabic", serif;
+text-align: center;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+color: #f78f8f;
+opacity: 0.8;
+}
+
+.newsletter-form button {
+padding: 12px;
+font-size: 18px;
+border: 2px solid #f78f8f;
+border-radius: 4px;
+background: transparent;
+color: #f78f8f;
+cursor: pointer;
+font-family: "Traditional Arabic", serif;
+transition: background 0.3s, color 0.3s;
+}
+
+.newsletter-form button:hover {
+background: #f78f8f;
+color: #000;
+}
+
+
+/* Newsletter container box */
+.newsletter-container {
+width: 400px;
+max-width: 400px;
+margin: 150px auto 0 auto;  /* Centers horizontally with space from top */
+padding: 30px;
+border: 2px solid #f78f8f;  /* Pink border like categories/nav */
+background: transparent;
+text-align: center;
+font-family: "Traditional Arabic", serif;
+color: #f78f8f;
+}
+
+/* Newsletter title */
+.newsletter-title {
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+/* Form layout */
+.newsletter-form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+/* Email input */
+.newsletter-form input[type="email"] {
+padding: 10px;
+font-size: 18px;
+border: 1px solid #f78f8f;
+border-radius: 4px;
+background: transparent;
+color: #f78f8f;
+text-align: center;
+font-family: "Traditional Arabic", serif;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+color: #f78f8f;
+opacity: 0.8;
+}
+
+/* Submit button */
+.newsletter-form button {
+padding: 12px;
+font-size: 18px;
+border: 2px solid #f78f8f;
+border-radius: 4px;
+background: transparent;
+color: #f78f8f;
+cursor: pointer;
+font-family: "Traditional Arabic", serif;
+transition: background 0.3s, color 0.3s;
+}
+
+.newsletter-form button:hover {
+background: #f78f8f;
+color: #000;
+}
+
+.music-links {
+margin-top: 100vh;
+padding: 4rem 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #000;
+}
+
+.music-container {
+display: flex;
+flex-direction: row;
+gap: 5rem;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+max-width: 1200px;
+width: 100%;
+}
+
+.button-group {
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+max-width: 300px;
+}
+
+.button-group h2 {
+font-size: 1.8rem;
+color: #f78f8f;
+margin-bottom: 1rem;
+font-family: "Traditional Arabic", serif;
+}
+
+.link-button {
+background-color: transparent;
+border: 2px solid #f78f8f;
+color: #f78f8f;
+font-size: 1.2rem;
+padding: 0.75rem 2rem;
+text-decoration: none;
+font-family: "Traditional Arabic", serif;
+border-radius: 5px;
+transition: all 0.3s ease;
+text-align: center;
+}
+
+.link-button:hover {
+background-color: #f78f8f;
+color: #000;
+}
+
+.image-box img {
+width: 320px;
+max-width: 100%;
+height: auto;
+border-radius: 6px;
+box-shadow: 0 0 12px #f78f8f44;
 }
