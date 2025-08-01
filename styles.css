@@ -110,9 +110,6 @@ nav a:hover::after {
   border: none;
 }
 
-
-
-
 .banner-content h1 {
   font-size: 2rem;
   font-weight: normal;
@@ -170,7 +167,6 @@ nav a:hover::after {
   color: #000;
 }
 
-
 .image-box img {
   width: 320px;
   max-width: 100%;
@@ -178,7 +174,6 @@ nav a:hover::after {
   border-radius: 0;
   box-shadow: 0 0 12px #f78f8f44;
 }
-
 
 /* ------------------ Newsletter Form ------------------ */
 .newsletter-container {
