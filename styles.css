@@ -376,13 +376,13 @@ color: #000;
 }
 
 .music-links {
-  margin-top: 180px; /* or adjust to your desired spacing */
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000;
 }
+
 
 
 .music-container {
