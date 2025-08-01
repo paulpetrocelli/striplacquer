@@ -95,12 +95,13 @@ nav a:hover::after {
 }
 
 .banner-content img {
-  width: 95vw;
+  width: 100vw;
   max-width: none;
   height: auto;
-  margin: 1rem 0;
-  margin-left: -2vw;
+  margin: 2rem 0;
+  margin-left: -4vw; /* gives that nice “bleeding edge” effect */
 }
+
 
 .banner-content h1 {
   font-size: 2rem;
