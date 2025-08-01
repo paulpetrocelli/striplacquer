@@ -94,13 +94,22 @@ nav a:hover::after {
   padding-bottom: 3rem;
 }
 
+.banner-content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .banner-content img {
-  width: 110vw;
+  display: block;
+  width: 100%;
   max-width: none;
   height: auto;
-  margin: 2rem 0;
-  margin-left: -5vw;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
+
 
 
 
