@@ -72,8 +72,7 @@
     }
 
     .music-links {
-      margin-top: 100vh;
-      padding: 4rem 2rem;
+      padding: 200px 2rem 4rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -83,9 +82,8 @@
     .music-container {
       display: flex;
       flex-direction: row;
-      gap: 5rem;
+      gap: 4rem;
       align-items: center;
-      justify-content: center;
       flex-wrap: wrap;
       max-width: 1200px;
       width: 100%;
@@ -94,7 +92,7 @@
     .button-group {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.25rem;
       max-width: 300px;
     }
 
@@ -109,12 +107,11 @@
       border: 2px solid #f78f8f;
       color: #f78f8f;
       font-size: 1.2rem;
-      padding: 0.75rem 2rem;
+      padding: 0.6rem 1.2rem;
       text-decoration: none;
       font-family: "Traditional Arabic Regular", serif;
       border-radius: 0;
       transition: all 0.3s ease;
-      text-align: left;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -125,10 +122,15 @@
       color: #000;
     }
 
-    .stream-logo {
+    .link-button img.icon {
       height: 1.2em;
-      vertical-align: middle;
+      width: auto;
       filter: invert(88%) sepia(15%) saturate(300%) hue-rotate(315deg) brightness(97%) contrast(85%);
+      transition: filter 0.3s ease;
+    }
+
+    .link-button:hover img.icon {
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
     }
 
     .image-box img {
@@ -162,22 +164,21 @@
   
       <div class="button-group">
         <h2>Listen to Strip Lacquer</h2>
-  
+
         <a href="https://striplacquer.bandcamp.com/" class="link-button" target="_blank">
           <img src="img/bandcamp.svg" class="icon" alt="Bandcamp logo"> Bandcamp
         </a>
-  
+
         <a href="https://www.youtube.com/@striplacquer" class="link-button" target="_blank">
           <img src="img/youtube.svg" class="icon" alt="YouTube logo"> YouTube
         </a>
-  
+
         <a href="https://soundcloud.com/strip-lacquer" class="link-button" target="_blank">
           <img src="img/soundcloud.svg" class="icon" alt="SoundCloud logo"> SoundCloud
         </a>
       </div>
     </div>
   </section>
-  
 
 </body>
 </html>
