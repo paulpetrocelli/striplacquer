@@ -98,8 +98,8 @@ nav a:hover::after {
 /* ------------------ Homepage Banner ------------------ */
 .banner {
   position: relative;
-  padding-top: 120px; /* same as .top-bar height */
-  background-color: #000;
+  background: #000;
+  padding-top: 120px; /* offset for fixed top-bar */
 }
 
 
@@ -128,12 +128,12 @@ nav a:hover::after {
 
 /* ------------------ Music Section ------------------ */
 .music-links {
-  padding: 2rem 2rem 4rem;
+  padding: 3rem 2rem 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000;
-  min-height: calc(100vh - 120px); /* fit screen minus top bar */
+  min-height: calc(100vh - 120px); /* fills remaining screen height */
 }
 
 
