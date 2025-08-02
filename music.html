@@ -6,155 +6,166 @@
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
   <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
   <style>
-@font-face {
-  font-family: "Traditional Arabic Regular";
-  src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-       url("fonts/TraditionalArabic.woff") format("woff"),
-       url("fonts/TraditionalArabic.ttf") format("truetype");
-}
+    @font-face {
+      font-family: "Traditional Arabic Regular";
+      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
+           url("fonts/TraditionalArabic.woff") format("woff"),
+           url("fonts/TraditionalArabic.ttf") format("truetype");
+    }
 
-body {
-  margin: 0;
-  background-color: #000;
-  color: #f78f8f;
-  font-family: "Traditional Arabic Regular", serif;
-}
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #f78f8f;
+      font-family: "Traditional Arabic Regular", serif;
+    }
 
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  height: 120px;
-  z-index: 1000;
-  background-color: transparent;
-}
+    /* Banner wraps the header bar and adds vertical space */
+    .banner {
+      position: relative;
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-.logo-link {
-  display: inline-block;
-  height: 100%;
-  margin-right: 50px;
-}
+    .top-bar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      height: 120px;
+      z-index: 1000;
+      background-color: transparent;
+    }
 
-.site-logo {
-  height: 100%;
-  display: block;
-}
+    .logo-link {
+      display: inline-block;
+      height: 100%;
+      margin-right: 50px;
+    }
 
-nav {
-  display: flex;
-  gap: 2rem;
-  font-size: 1rem;
-}
+    .site-logo {
+      height: 100%;
+      display: block;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #f78f8f;
-  font-weight: bold;
-  letter-spacing: 1px;
-  position: relative;
-}
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-size: 1rem;
+    }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  left: 0;
-  bottom: -4px;
-  background-color: #f78f8f;
-  transition: width 0.3s ease;
-}
+    nav a {
+      text-decoration: none;
+      color: #f78f8f;
+      font-weight: bold;
+      letter-spacing: 1px;
+      position: relative;
+    }
 
-nav a:hover::after {
-  width: 100%;
-}
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background-color: #f78f8f;
+      transition: width 0.3s ease;
+    }
 
-/* ------------------ Music Section ------------------ */
-.music-links {
-  padding: 160px 2rem 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-}
+    nav a:hover::after {
+      width: 100%;
+    }
 
-.music-container {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
-}
+    /* ------------------ Music Section ------------------ */
+    .music-links {
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+    }
 
-.button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  max-width: 300px;
-  align-items: flex-start;
-}
+    .music-container {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      width: 100%;
+    }
 
-.button-group h2 {
-  font-size: 1.8rem;
-  color: #f78f8f;
-  margin-bottom: 1rem;
-  text-align: left;
-}
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      max-width: 300px;
+      align-items: flex-start;
+    }
 
-.link-button {
-  background-color: transparent;
-  border: 2px solid #f78f8f;
-  color: #f78f8f;
-  font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  font-family: "Traditional Arabic Regular", serif;
-  border-radius: 0;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  justify-content: flex-start;
-}
+    .button-group h2 {
+      font-size: 1.8rem;
+      color: #f78f8f;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
 
-.link-button:hover {
-  background-color: #f78f8f;
-  color: #000;
-}
+    .link-button {
+      background-color: transparent;
+      border: 2px solid #f78f8f;
+      color: #f78f8f;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-family: "Traditional Arabic Regular", serif;
+      border-radius: 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      justify-content: flex-start;
+    }
 
-.link-button:hover .stream-logo {
-  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
-}
+    .link-button:hover {
+      background-color: #f78f8f;
+      color: #000;
+    }
 
-.stream-logo {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  filter: brightness(0) saturate(100%) invert(78%) sepia(19%) saturate(746%) hue-rotate(304deg) brightness(93%) contrast(89%);
-  transition: filter 0.3s ease;
-}
+    .link-button:hover .stream-logo {
+      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    }
 
-/* ------------------ Tape Image ------------------ */
-.image-box img {
-  width: 320px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 0;
-  box-shadow: none;
-}
+    .stream-logo {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      filter: brightness(0) saturate(100%) invert(78%) sepia(19%) saturate(746%) hue-rotate(304deg) brightness(93%) contrast(89%);
+      transition: filter 0.3s ease;
+    }
 
+    /* ------------------ Tape Image ------------------ */
+    .image-box img {
+      width: 320px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Match the banner spacing exactly -->
   <header class="banner">
     <div class="top-bar">
       <a href="/index.html" class="logo-link">
@@ -168,32 +179,30 @@ nav a:hover::after {
       </nav>
     </div>
   </header>
-  
 
   <section class="music-links">
     <div class="music-container">
       <div class="button-group">
         <h2>Listen to Strip Lacquer</h2>
-  
+
         <a href="https://striplacquer.bandcamp.com/" class="link-button" target="_blank">
           <img src="img/bandcamp.svg" class="stream-logo" alt="Bandcamp logo" /> Bandcamp
         </a>
-  
+
         <a href="https://www.youtube.com/@striplacquer" class="link-button" target="_blank">
           <img src="img/youtube.svg" class="stream-logo" alt="YouTube logo" /> YouTube
         </a>
-  
+
         <a href="https://soundcloud.com/strip-lacquer" class="link-button" target="_blank">
           <img src="img/soundcloud.svg" class="stream-logo" alt="SoundCloud logo" /> SoundCloud
         </a>
       </div>
-  
+
       <div class="image-box">
         <img src="img/temporary tapes.jpg" alt="Tape photo" />
       </div>
     </div>
   </section>
-  
 
 </body>
 </html>
