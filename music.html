@@ -7,58 +7,44 @@
   <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
 
   <style>
-    /* ------------------ Font Setup ------------------ */
     @font-face {
-      font-family: "Traditional Arabic Regular";
-      src: local("Traditional Arabic Regular"),
-           url("fonts/TraditionalArabic.woff2") format("woff2"),
+      font-family: "Traditional Arabic";
+      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
            url("fonts/TraditionalArabic.woff") format("woff"),
            url("fonts/TraditionalArabic.ttf") format("truetype");
-    }
-
-    @font-face {
-      font-family: "Trickster Outline";
-      src: url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-           url("trickster-outline.otf") format("opentype"),
-           url("trickster-outline.woff") format("woff");
-    }
-
-    /* ------------------ Base Reset ------------------ */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
     }
 
     body {
       margin: 0;
+      font-family: "Traditional Arabic", serif;
+      color: #f78f8f;
       background-color: #000;
-      color: #f78f8f;
-      font-family: "Traditional Arabic Regular", serif;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
 
-    h1 {
-      font-family: "Georgia";
-      color: #f78f8f;
+    /* ------------------ Banner ------------------ */
+    .banner {
+      position: relative;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
-    /* ------------------ Header & Navigation ------------------ */
+    /* ------------------ Top Bar ------------------ */
     .top-bar {
       position: fixed;
-      top: 0;
+      top: 60px;
       left: 0;
       width: 100%;
-      height: 120px;
       display: flex;
       align-items: center;
       padding: 0 30px;
       z-index: 1000;
-      background-color: transparent;
     }
 
     .logo-link {
@@ -102,21 +88,14 @@
       width: 100%;
     }
 
-    /* ------------------ Banner Spacing ------------------ */
-    .banner {
-      position: relative;
-      background: #000;
-      padding-top: 120px; /* match .top-bar height */
-    }
-
     /* ------------------ Music Section ------------------ */
     .music-links {
-      padding: 3rem 2rem 4rem;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #000;
-      min-height: calc(100vh - 120px); /* fill remaining viewport */
+      min-height: 100vh;
+      padding: 0 2rem;
     }
 
     .music-container {
@@ -182,7 +161,6 @@
       border-radius: 0;
       box-shadow: none;
     }
-
   </style>
 </head>
 
