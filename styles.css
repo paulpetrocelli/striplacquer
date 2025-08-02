@@ -14,12 +14,23 @@
        url("trickster-outline.woff") format("woff");
 }
 
-/* ------------------ Base Styles ------------------ */
+/* ------------------ Base Reset ------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   background-color: #000;
   color: #f78f8f;
   font-family: "Traditional Arabic Regular", serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -152,18 +163,17 @@ nav a:hover::after {
 .link-button {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 0.75rem;
   background-color: transparent;
   border: 2px solid #f78f8f;
   color: #f78f8f;
-  font-size: 1.2rem;
-  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
   text-decoration: none;
   font-family: inherit;
   border-radius: 0;
   transition: all 0.3s ease;
-  text-align: left;
+  justify-content: center;
 }
 
 .link-button:hover {
@@ -172,18 +182,17 @@ nav a:hover::after {
 }
 
 .link-button:hover .icon {
-  filter: invert(0); /* makes icons black on hover */
+  filter: invert(0);
 }
 
-/* Properly colored SVGs */
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   filter: brightness(0) saturate(100%) invert(78%) sepia(19%) saturate(746%) hue-rotate(304deg) brightness(93%) contrast(89%);
   transition: filter 0.3s ease;
 }
 
-/* Tape image */
+/* ------------------ Tape Image ------------------ */
 .image-box img {
   width: 320px;
   max-width: 100%;
