@@ -1,162 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
-  <style>
-    @font-face {
-      font-family: "Traditional Arabic Regular";
-      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-           url("fonts/TraditionalArabic.woff") format("woff"),
-           url("fonts/TraditionalArabic.ttf") format("truetype");
-    }
-
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #f78f8f;
-      font-family: "Traditional Arabic Regular", serif;
-    }
-
-    .top-bar {
-      display: flex;
-      align-items: center;
-      padding: 0 30px;
-      height: 120px;
-      background-color: #000;
-    }
-
-    .logo-link {
-      display: inline-block;
-      height: 100%;
-      margin-right: 50px;
-    }
-
-    .site-logo {
-      height: 100%;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      gap: 2rem;
-      font-size: 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #f78f8f;
-      font-weight: bold;
-      letter-spacing: 1px;
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background-color: #f78f8f;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .music-links {
-      margin-top: 0;
-      padding: 1rem 2rem 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background-color: #000;
-    }
-
-    .music-container {
-      display: flex;
-      flex-direction: row;
-      gap: 3rem;
-      align-items: flex-start;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      width: 100%;
-    }
-
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 300px;
-      align-items: flex-start;
-    }
-
-    .button-group h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      text-align: left;
-    }
-
-    .link-button {
-      background-color: transparent;
-      border: 2px solid #f78f8f;
-      color: #f78f8f;
-      font-size: 1rem;
-      padding: 0.4rem 1rem;
-      text-decoration: none;
-      font-family: inherit;
-      border-radius: 0;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-      justify-content: flex-start;
-    }
-
-    .link-button:hover {
-      background-color: #f78f8f;
-      color: #000;
-    }
-
-    .link-button:hover .stream-logo {
-      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
-    }
-
-    .stream-logo {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-      filter: brightness(0) saturate(100%) invert(78%) sepia(19%) saturate(746%) hue-rotate(304deg) brightness(93%) contrast(89%);
-      transition: filter 0.3s ease;
-    }
-
-    .image-box img {
-      width: 280px;
-      max-width: 100%;
-      height: auto;
-      border-radius: 0;
-      box-shadow: none;
-    }
-  </style>
-</head>
 <body>
 
-  <header class="top-bar">
-    <a href="/index.html" class="logo-link">
-      <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
-    </a>
-    <nav>
-      <a href="/bio.html">◊ BIO</a>
-      <a href="/music.html">◊ MUSIC</a>
-      <a href="/gallery.html">◊ GALLERY</a>
-      <a href="/newsletter.html">◊ NEWSLETTER</a>
-    </nav>
+  <header class="banner">
+    <div class="top-bar">
+      <a href="/index.html" class="logo-link">
+        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
+      </a>
+      <nav>
+        <a href="/bio.html">◊ BIO</a>
+        <a href="/music.html">◊ MUSIC</a>
+        <a href="/gallery.html">◊ GALLERY</a>
+        <a href="/newsletter.html">◊ NEWSLETTER</a>
+      </nav>
+    </div>
+
+    <!-- Optional visual spacing match -->
+    <div class="spacer"></div>
   </header>
 
   <section class="music-links">
@@ -165,15 +23,15 @@
         <h2>Listen to Strip Lacquer</h2>
 
         <a href="https://striplacquer.bandcamp.com/" class="link-button" target="_blank">
-          <img src="img/bandcamp.svg" class="stream-logo" alt="Bandcamp logo" /> Bandcamp
+          <img src="img/bandcamp.svg" class="icon" alt="Bandcamp logo" /> Bandcamp
         </a>
 
         <a href="https://www.youtube.com/@striplacquer" class="link-button" target="_blank">
-          <img src="img/youtube.svg" class="stream-logo" alt="YouTube logo" /> YouTube
+          <img src="img/youtube.svg" class="icon" alt="YouTube logo" /> YouTube
         </a>
 
         <a href="https://soundcloud.com/strip-lacquer" class="link-button" target="_blank">
-          <img src="img/soundcloud.svg" class="stream-logo" alt="SoundCloud logo" /> SoundCloud
+          <img src="img/soundcloud.svg" class="icon" alt="SoundCloud logo" /> SoundCloud
         </a>
       </div>
 
@@ -184,4 +42,3 @@
   </section>
 
 </body>
-</html>
