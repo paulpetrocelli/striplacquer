@@ -269,3 +269,14 @@ nav a:hover::after {
 .item-2 {
   padding: 1em;
 }
+
+
+.banner {
+  position: relative;
+  height: 100vh;
+  background: #000; /* or fabric-bg if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
