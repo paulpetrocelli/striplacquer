@@ -9,18 +9,12 @@
   <style>
     /* ------------------ Font Setup ------------------ */
     @font-face {
-      font-family: "Traditional Arabic Regular";
-      src: local("Traditional Arabic Regular"),
-           url("fonts/TraditionalArabic.woff2") format("woff2"),
+      font-family: "Traditional Arabic";
+      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
            url("fonts/TraditionalArabic.woff") format("woff"),
            url("fonts/TraditionalArabic.ttf") format("truetype");
-    }
-
-    @font-face {
-      font-family: "Trickster Outline";
-      src: url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-           url("trickster-outline.otf") format("opentype"),
-           url("trickster-outline.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
     }
 
     /* ------------------ Base Reset ------------------ */
@@ -36,29 +30,27 @@
       margin: 0;
       background-color: #000;
       color: #f78f8f;
-      font-family: "Traditional Arabic Regular", serif;
+      font-family: "Traditional Arabic", serif;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-    h1 {
-      font-family: "Georgia";
+    h1, h2 {
+      font-family: "Traditional Arabic", serif;
       color: #f78f8f;
     }
 
-    /* ------------------ Header & Navigation ------------------ */
+    /* ------------------ Top Bar ------------------ */
     .top-bar {
       position: fixed;
-      top: 0;
+      top: 60px; /* matches homepage */
       left: 0;
       width: 100%;
-      height: 120px;
       display: flex;
       align-items: center;
       padding: 0 30px;
       z-index: 1000;
-      background-color: transparent;
     }
 
     .logo-link {
@@ -102,21 +94,19 @@
       width: 100%;
     }
 
-    /* ------------------ Banner Spacing ------------------ */
-    .banner {
-      position: relative;
-      background: #000;
-      padding-top: 120px; /* match .top-bar height */
+    /* ------------------ Banner Offset ------------------ */
+    .banner-offset {
+      height: 180px; /* 60px top + 120px logo = 180px spacer */
     }
 
     /* ------------------ Music Section ------------------ */
     .music-links {
-      padding: 0.5rem 2rem 1.5rem; /* tightened spacing */
+      padding: 0.5rem 2rem 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #000;
-      min-height: calc(100vh - 120px);
+      min-height: calc(100vh - 180px);
     }
 
     .music-container {
@@ -174,7 +164,6 @@
       transition: filter 0.3s ease;
     }
 
-    /* ------------------ Tape Image ------------------ */
     .image-box img {
       width: 320px;
       max-width: 100%;
@@ -182,11 +171,11 @@
       border-radius: 0;
       box-shadow: none;
     }
-
   </style>
 </head>
 
 <body>
+  <!-- Top bar (same as homepage) -->
   <div class="top-bar">
     <a href="/index.html" class="logo-link">
       <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
@@ -199,6 +188,10 @@
     </nav>
   </div>
 
+  <!-- Offset to clear fixed top bar -->
+  <div class="banner-offset"></div>
+
+  <!-- Main music content -->
   <main class="music-links">
     <div class="music-container">
       <div class="button-group">
@@ -223,5 +216,4 @@
     </div>
   </main>
 </body>
-
 </html>
