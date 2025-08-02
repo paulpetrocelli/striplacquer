@@ -271,11 +271,10 @@ nav a:hover::after {
   padding: 1em;
 }
 
-
 .banner {
   position: relative;
   height: 100vh;
-  background: #000; /* or fabric-bg if needed */
+  background: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
