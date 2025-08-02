@@ -6,7 +6,6 @@
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
   <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
   <style>
-    /* Font setup */
     @font-face {
       font-family: "Traditional Arabic Regular";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
@@ -18,10 +17,9 @@
       margin: 0;
       background-color: #000;
       color: #f78f8f;
-      font-family: "Traditional Arabic", serif;
+      font-family: "Traditional Arabic Regular", serif;
     }
 
-    /* Top Navigation Bar */
     .top-bar {
       position: fixed;
       top: 60px;
@@ -74,13 +72,13 @@
     }
 
     .music-links {
-  padding: 250px 2rem 4rem; /* push just below the fixed nav */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-}
-
+      margin-top: 100vh;
+      padding: 4rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+    }
 
     .music-container {
       display: flex;
@@ -113,10 +111,13 @@
       font-size: 1.2rem;
       padding: 0.75rem 2rem;
       text-decoration: none;
-      font-family: "Traditional Arabic", serif;
-      border-radius: 5px;
+      font-family: "Traditional Arabic Regular", serif;
+      border-radius: 0;
       transition: all 0.3s ease;
-      text-align: center;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
     .link-button:hover {
@@ -124,18 +125,23 @@
       color: #000;
     }
 
+    .stream-logo {
+      height: 1.2em;
+      vertical-align: middle;
+      filter: invert(88%) sepia(15%) saturate(300%) hue-rotate(315deg) brightness(97%) contrast(85%);
+    }
+
     .image-box img {
       width: 320px;
       max-width: 100%;
       height: auto;
-      border-radius: 6px;
+      border-radius: 0;
       box-shadow: 0 0 12px #f78f8f44;
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Header -->
   <header class="top-bar">
     <a href="/index.html" class="logo-link">
       <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
@@ -148,14 +154,19 @@
     </nav>
   </header>
 
-  <!-- Music Section -->
   <section class="music-links">
     <div class="music-container">
       <div class="button-group">
         <h2>Listen to Strip Lacquer</h2>
-        <a href="https://striplacquer.bandcamp.com/" target="_blank" class="link-button">Bandcamp</a>
-        <a href="https://www.youtube.com/@striplacquer" target="_blank" class="link-button">YouTube</a>
-        <a href="https://soundcloud.com/strip-lacquer" target="_blank" class="link-button">SoundCloud</a>
+        <a href="https://striplacquer.bandcamp.com/" target="_blank" class="link-button">
+          <img src="img/bandcamp.logo.png" alt="Bandcamp" class="stream-logo"> Bandcamp
+        </a>
+        <a href="https://www.youtube.com/@striplacquer" target="_blank" class="link-button">
+          <img src="img/youtube.logo.png" alt="YouTube" class="stream-logo"> YouTube
+        </a>
+        <a href="https://soundcloud.com/strip-lacquer" target="_blank" class="link-button">
+          <img src="img/soundcloud.logo.png" alt="SoundCloud" class="stream-logo"> SoundCloud
+        </a>
       </div>
       <div class="image-box">
         <img src="img/temporary tapes.jpg" alt="Strip Lacquer Tape" />

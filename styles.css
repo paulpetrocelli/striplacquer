@@ -244,3 +244,10 @@ nav a:hover::after {
 .item-2 {
   padding: 1em;
 }
+
+.stream-logo {
+  height: 1.2em;
+  vertical-align: middle;
+  margin-right: 10px;
+  filter: invert(88%) sepia(15%) saturate(300%) hue-rotate(315deg) brightness(97%) contrast(85%);
+}
