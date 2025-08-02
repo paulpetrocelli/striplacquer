@@ -141,12 +141,13 @@ nav a:hover::after {
   display: flex;
   flex-direction: row;
   gap: 5rem;
-  align-items: center;
+  align-items: flex-start; /* aligns tops */
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
 }
+
 
 .button-group {
   display: flex;
