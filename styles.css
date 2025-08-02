@@ -152,6 +152,7 @@ nav a:hover::after {
 .link-button {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.75rem;
   background-color: transparent;
   border: 2px solid #f78f8f;
@@ -160,9 +161,9 @@ nav a:hover::after {
   padding: 0.75rem 2rem;
   text-decoration: none;
   font-family: inherit;
-  border-radius: 0; /* square corners */
+  border-radius: 0;
   transition: all 0.3s ease;
-  text-align: center;
+  text-align: left;
 }
 
 .link-button:hover {
@@ -171,9 +172,10 @@ nav a:hover::after {
 }
 
 .link-button:hover .icon {
-  filter: invert(0); /* makes icons black when text is black */
+  filter: invert(0); /* makes icons black on hover */
 }
 
+/* Properly colored SVGs */
 .icon {
   width: 24px;
   height: 24px;
@@ -181,13 +183,13 @@ nav a:hover::after {
   transition: filter 0.3s ease;
 }
 
-
+/* Tape image */
 .image-box img {
   width: 320px;
   max-width: 100%;
   height: auto;
   border-radius: 0;
-  box-shadow: 0 0 12px #f78f8f44;
+  box-shadow: none;
 }
 
 /* ------------------ Newsletter Form ------------------ */
@@ -258,10 +260,4 @@ nav a:hover::after {
 
 .item-2 {
   padding: 1em;
-}
-
-.stream-logo {
-  height: 1.2em;
-  vertical-align: middle;
-  filter: brightness(0) saturate(100%) invert(80%) sepia(30%) saturate(1000%) hue-rotate(310deg) brightness(95%) contrast(95%);
 }
