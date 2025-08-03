@@ -306,3 +306,7 @@ nav a:hover::after {
   background-color: #000;
   min-height: calc(100vh - 60px);
 }
+
+* {
+  text-transform: none;
+}
