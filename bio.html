@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="img/x-icon" href="img/favicon9.png">
+  <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
   <style>
-    /* Embed Traditional Arabic font (self-hosted) */
     @font-face {
       font-family: "Traditional Arabic";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
@@ -23,47 +22,35 @@
       background-color: #000;
     }
 
-    /* Banner container */
-    .banner {
-      position: relative;
-      height: 100vh;
-      background: url('fabric-bg.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    /* Sticky top bar */
     .top-bar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 2vw; /* Responsive horizontal padding */
-  z-index: 1000;
-  gap: 2vw; /* Adds flexible space between logo and nav */
-}
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 2vw;
+      z-index: 1000;
+      gap: 2vw;
+    }
 
-.logo-link {
-  display: inline-block;
-  height: 120px;
-  flex-shrink: 0;
-}
+    .logo-link {
+      display: inline-block;
+      height: 120px;
+      flex-shrink: 0;
+    }
 
-.site-logo {
-  height: 100%;
-  display: block;
-}
+    .site-logo {
+      height: 100%;
+      display: block;
+    }
 
-nav {
-  display: flex;
-  gap: 2vw; /* Spacing between nav items scales with screen */
-  font-size: 1rem;
-  flex-wrap: wrap;
-}
+    nav {
+      display: flex;
+      gap: 2vw;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
 
     nav a {
       text-decoration: none;
@@ -74,7 +61,6 @@ nav {
       font-family: inherit;
     }
 
-    /* Underline animation */
     nav a::after {
       content: "";
       position: absolute;
@@ -90,48 +76,88 @@ nav {
       width: 100%;
     }
 
-    /* Center band image and text */
-    .banner-content img {
-      width: 60%;
-      max-width: 800px;
-      height: auto;
-      margin-bottom: 1rem;
-      margin-top: 180px;
+    .banner-offset {
+      height: 180px;
     }
 
-    .banner-content h1 {
-      font-size: 2rem;
-      font-weight: normal;
-      color: #f78f8f;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-family: inherit;
+    .bio-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 5rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .bio-text {
+      max-width: 500px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .bio-image img {
+      width: 320px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .bio-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .bio-text {
+        max-width: 90%;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div class="top-bar">
+    <a href="/index.html" class="logo-link">
+      <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
+    </a>
+    <nav>
+      <a href="/bio.html"><span style="white-space: nowrap;">◊ BIO</span></a>
+      <a href="/music.html"><span style="white-space: nowrap;">◊ MUSIC</span></a>
+      <a href="/gallery.html"><span style="white-space: nowrap;">◊ GALLERY</span></a>
+      <a href="/newsletter.html"><span style="white-space: nowrap;">◊ NEWSLETTER</span></a>
+      <a href="/contact.html"><span style="white-space: nowrap;">◊ CONTACT</span></a>
+    </nav>
+  </div>
 
-  <header class="banner">
-    <div class="top-bar">
-      <!-- Clickable logo links to homepage -->
-      <a href="/index.html" class="logo-link">
-        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
-      </a>
-      <nav>
-        <a href="/bio.html"><span style="white-space: nowrap;">◊ BIO</span></a>
-        <a href="/music.html"><span style="white-space: nowrap;">◊ MUSIC</span></a>
-        <a href="/gallery.html"><span style="white-space: nowrap;">◊ GALLERY</span></a>
-        <a href="/newsletter.html"><span style="white-space: nowrap;">◊ NEWSLETTER</span></a>
-        <a href="/contact.html"><span style="white-space: nowrap;">◊ CONTACT</span></a>
+  <div class="banner-offset"></div>
 
-      </nav>
+  <main class="bio-section">
+    <div class="bio-text">
+      <i>
+        Gasping for air through the grip of a shiny leather glove.<br>
+        Dragging cellophane wrapped glass against concrete.<br>
+        An open wound shrouded in a sleek satin veil.<br><br>
+
+        Toronto-based band Strip Lacquer are an act who are comfortable existing in unease.<br><br>
+
+        Drawing from art rock experimentation, industrial abrasiveness, and post-punk ethos – Strip Lacquer is an outfit that encompasses sharp emotional songwriting with nuanced dissonance and a diverse sonic palette. Jagged noisy guitar contorts and pierces through glossy synth melodies while cavernous bass envelops feverish drum sections. Rich vocals soak the songs in sickly sweet lyrics reckoning with obsession, despair and disgust. <br><br>
+
+        Vocalist Robin and guitarist Paul met working together at a Toronto record store. Bonding over literature, Czech new wave film, 50’s fetish illustration and surrealist photography, the two began a romantic relationship and soon after started a band. <br><br>
+
+        Their musical influences include Fad Gadget, Malaria!, Chris and Cosey, HTRK, Section 25, Josef K, DAF and Broadcast. <br><br>
+
+        Strip Lacquer is laced in a delicate yet murky disposition, shifting seamlessly from amoral to vulnerable, warped by a desire to dissect the grotesque.
+      </i>
     </div>
 
-    <div class="banner-content">
-      <img src="img/shoot1.western2.edited.jpg" alt="Band Photo">
-      <h1>est. 2024</h1>
+    <div class="bio-image">
+      <img src="img/shoot1.western2.edited.jpg" alt="Band Photo" />
     </div>
-  </header>
-
+  </main>
 </body>
 </html>
