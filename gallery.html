@@ -50,8 +50,8 @@
     /* Make logo area fully clickable */
     .logo-link {
       display: inline-block;
-      height: 120px;      /* Matches logo height */
-      margin-right: 50px; /* Space before nav */
+      height: 120px;
+      margin-right: 50px;
     }
 
     .site-logo {
@@ -75,7 +75,6 @@
       font-family: inherit;
     }
 
-    /* Underline animation */
     nav a::after {
       content: "";
       position: absolute;
@@ -91,7 +90,6 @@
       width: 100%;
     }
 
-    /* Center band image and text */
     .banner-content img {
       width: 60%;
       max-width: 800px;
@@ -108,36 +106,56 @@
       letter-spacing: 2px;
       font-family: inherit;
     }
+
+    /* Poster Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(247, 143, 143, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
   </style>
 </head>
 <body>
 
   <header class="banner">
     <div class="top-bar">
-      <!-- Clickable logo links to homepage -->
       <a href="/index.html" class="logo-link">
         <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
       </a>
-<nav>
-  <a href="/bio.html">◊ BIO </a>
-  <a href="/music.html">◊ MUSIC </a>
-  <a href="/gallery.html">◊ GALLERY </a>
-  <a href="newsletter.html">◊ NEWSLETTER </a>
-</nav>
+      <nav>
+        <a href="/bio.html">◊ BIO </a>
+        <a href="/music.html">◊ MUSIC </a>
+        <a href="/gallery.html">◊ GALLERY </a>
+        <a href="newsletter.html">◊ NEWSLETTER </a>
+      </nav>
     </div>
-
   </header>
 
   <div class="gallery">
-    <img src="img/posters/Garrison.24.10.2024.jpg" alt="Show Poster Oct 2024" />
-    <img src="img/posters/Collective Arts 18.01.2025.jpg" alt="Show Poster Jan 2025" />
-    <img src="img/posters/Kingston 01.03.2025.jpg" alt="Show Poster Mar 2025" />
-    <img src="img/posters/Monarch.11.05.2025.jpg" alt="Show Poster May 2025" />
-    <img src="img/posters/Bambi's.29.05.2025(temporary).png" alt="Show Poster May 2025" />
-    <img src="img/posters/Kingston 01.03.2025.jpg" alt="Show Poster July 2025" />
     <img src="img/posters/Monarch.24.09.2025.png" alt="Show Poster Sep 2025" />
-
-
+    <img src="img/posters/Kingston 01.03.2025.jpg" alt="Show Poster July 2025" />
+    <img src="img/posters/Bambi's.29.05.2025(temporary).png" alt="Show Poster May 2025" />
+    <img src="img/posters/Monarch.11.05.2025.jpg" alt="Show Poster May 2025" />
+    <img src="img/posters/Kingston 01.03.2025.jpg" alt="Show Poster Mar 2025" />
+    <img src="img/posters/Collective Arts 18.01.2025.jpg" alt="Show Poster Jan 2025" />
+    <img src="img/posters/Garrison.24.10.2024.jpg" alt="Show Poster Oct 2024" />
   </div>
 
 </body>
