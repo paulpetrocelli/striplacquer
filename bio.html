@@ -100,11 +100,15 @@
     }
 
     .bio-image img {
-      width: 320px;
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+  width: 480px; /* was 320px */
+  max-width: none; /* remove constraint */
+  height: auto;
+  display: block;
+  margin-left: -60px; /* pulls image under the text slightly */
+  z-index: 0;
+  position: relative;
+}
+
 
     @media (max-width: 768px) {
       .bio-section {
