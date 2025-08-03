@@ -2,45 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
+  <link rel="stylesheet" href="style.css" />
   <style>
+    /* --------------- Font --------------- */
     @font-face {
-      font-family: "Traditional Arabic";
-      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
+      font-family: "Traditional Arabic Regular";
+      src: local("Traditional Arabic Regular"),
+           url("fonts/TraditionalArabic.woff2") format("woff2"),
            url("fonts/TraditionalArabic.woff") format("woff"),
            url("fonts/TraditionalArabic.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
+    @font-face {
+      font-family: "Trickster Outline";
+      src: url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+           url("trickster-outline.otf") format("opentype"),
+           url("trickster-outline.woff") format("woff");
     }
 
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: "Traditional Arabic", serif;
-      color: #f78f8f;
       background-color: #000;
-      line-height: 1.5;
-      max-width: 100%;
-      overflow-x: hidden;
+      color: #f78f8f;
+      font-family: "Traditional Arabic Regular", serif;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-    h1 {
-      font-family: Georgia, serif;
-      color: #f78f8f;
+    * {
+      box-sizing: border-box;
+      text-transform: none;
     }
 
-    /* Transparent Top Bar - DESKTOP */
+    /* --------------- Top Bar --------------- */
     .top-bar {
       position: fixed;
-      top: 20px; /* closer to top so less vertical scroll */
+      top: 60px;
       left: 0;
       width: 100%;
       height: 120px;
@@ -48,15 +47,12 @@
       align-items: center;
       padding: 0 30px;
       z-index: 1000;
-      background-color: transparent; /* transparent as requested */
-      gap: 2vw;
-      box-sizing: border-box;
+      background-color: transparent;
     }
 
     .logo-link {
       display: inline-block;
       height: 120px;
-      flex-shrink: 0;
       margin-right: 50px;
     }
 
@@ -69,17 +65,15 @@
       display: flex;
       gap: 2rem;
       font-size: 1rem;
-      flex-wrap: wrap;
     }
 
     nav a {
-      color: #f78f8f;
       text-decoration: none;
+      color: #f78f8f;
       font-weight: bold;
       letter-spacing: 1px;
       position: relative;
       font-family: inherit;
-      white-space: nowrap;
     }
 
     nav a::after {
@@ -97,23 +91,17 @@
       width: 100%;
     }
 
-    /* Banner Section */
+    /* --------------- Banner --------------- */
     .banner {
       position: relative;
       min-height: 100vh;
-      padding-top: 140px; /* reduced from before to move content up */
+      padding-top: 180px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      background: #000; /* solid black, no fabric bg */
+      background: #000;
       text-align: center;
-    }
-
-    .banner-content {
-      width: 100%;
-      padding: 0;
-      margin: 0;
     }
 
     .banner-content img {
@@ -121,9 +109,8 @@
       width: 60%;
       max-width: 800px;
       height: auto;
-      margin: 100px auto 0 auto; /* less top margin */
-      padding: 0;
-      border: none;
+      margin-top: 0;
+      margin-bottom: 1rem;
     }
 
     .banner-content h1 {
@@ -131,10 +118,9 @@
       font-weight: normal;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-top: 1rem;
     }
 
-    /* Responsive for smaller screens */
+    /* --------------- Responsive --------------- */
     @media (max-width: 768px) {
       .top-bar {
         top: 0;
@@ -143,7 +129,7 @@
         align-items: center;
         padding: 1rem;
         gap: 0.5rem;
-        background-color: #000; /* keep solid black on mobile for contrast */
+        background-color: #000;
       }
 
       .logo-link {
@@ -163,7 +149,7 @@
 
       .banner-content img {
         width: 100%;
-        margin: 140px 0 0 0;
+        margin-top: 0;
         max-width: none;
       }
 
@@ -175,25 +161,22 @@
 </head>
 <body>
 
-  <header class="banner">
-    <div class="top-bar">
-      <a href="/index.html" class="logo-link">
-        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
-      </a>
-      <nav>
-        <a href="/bio.html">◊ BIO</a>
-        <a href="/music.html">◊ MUSIC</a>
-        <a href="/gallery.html">◊ GALLERY</a>
-        <a href="/newsletter.html">◊ NEWSLETTER</a>
-        <a href="/contact.html">◊ CONTACT</a>
-      </nav>
-    </div>
-
-    <div class="banner-content">
-      <img src="img/SL.Couch.Square.png" alt="Band Photo" />
-      <h1>est. 2024</h1>
-    </div>
+  <header class="top-bar">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.svg" alt="Strip Lacquer Logo" class="site-logo" />
+    </a>
+    <nav>
+      <a href="bio.html">◊ BIO</a>
+      <a href="music.html">◊ MUSIC</a>
+      <a href="newsletter.html">◊ MAILING LIST</a>
+    </nav>
   </header>
+
+  <main class="banner">
+    <div class="banner-content">
+      <img src="images/banner-image.jpg" alt="Banner Image" />
+    </div>
+  </main>
 
 </body>
 </html>
