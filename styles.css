@@ -99,7 +99,7 @@ nav a:hover::after {
 .banner {
   position: relative;
   background: #000;
-  padding-top: 120px; /* offset for fixed top-bar */
+  padding-top: 90px; /* offset for fixed top-bar */
 }
 
 
