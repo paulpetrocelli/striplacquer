@@ -6,7 +6,6 @@
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
   <link rel="icon" type="img/x-icon" href="img/favicon9.png">
   <style>
-    /* Embed Traditional Arabic font (self-hosted) */
     @font-face {
       font-family: "Traditional Arabic";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
@@ -23,7 +22,6 @@
       background-color: #000;
     }
 
-    /* Banner container */
     .banner {
       position: relative;
       height: 100vh;
@@ -35,7 +33,6 @@
       text-align: center;
     }
 
-    /* Sticky top bar */
     .top-bar {
       position: fixed;
       top: 60px;
@@ -47,7 +44,6 @@
       z-index: 1000;
     }
 
-    /* Make logo area fully clickable */
     .logo-link {
       display: inline-block;
       height: 120px;
@@ -59,7 +55,6 @@
       display: block;
     }
 
-    /* Navigation */
     nav {
       display: flex;
       gap: 2rem;
@@ -110,7 +105,7 @@
     /* Poster Gallery */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       padding: 4rem 2rem;
       max-width: 1200px;
@@ -122,13 +117,7 @@
       height: auto;
       max-height: 500px;
       object-fit: contain;
-      border-radius: 10px;
       box-shadow: 0 0 10px rgba(247, 143, 143, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.03);
     }
   </style>
 </head>
@@ -150,7 +139,6 @@
 
   <div class="gallery">
     <img src="img/posters/Monarch.24.09.2025.png" alt="Show Poster Sep 2025" />
-    <img src="img/posters/Kingston 01.03.2025.jpg" alt="Show Poster July 2025" />
     <img src="img/posters/Bambi's.29.05.2025(temporary).png" alt="Show Poster May 2025" />
     <img src="img/posters/Monarch.11.05.2025.jpg" alt="Show Poster May 2025" />
     <img src="img/posters/Kingston 01.03.2025.jpg" alt="Show Poster Mar 2025" />
