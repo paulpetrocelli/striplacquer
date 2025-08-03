@@ -7,7 +7,6 @@
   <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
 
   <style>
-    /* ------------------ Font Setup ------------------ */
     @font-face {
       font-family: "Traditional Arabic";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
@@ -17,7 +16,6 @@
       font-style: normal;
     }
 
-    /* ------------------ Base Reset ------------------ */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -40,7 +38,6 @@
       font-family: "Traditional Arabic", serif;
     }
 
-    /* ------------------ Sticky Top Bar ------------------ */
     .top-bar {
       position: fixed;
       top: 60px;
@@ -94,12 +91,10 @@
       width: 100%;
     }
 
-    /* ------------------ Offset Spacer ------------------ */
     .banner-offset {
       height: 180px;
     }
 
-    /* ------------------ Music Section ------------------ */
     .music-links {
       padding: 0.5rem 2rem 1.5rem;
       display: flex;
@@ -140,8 +135,8 @@
       background-color: transparent;
       border: 2px solid #f78f8f;
       color: #f78f8f;
-      font-size: 1rem;
-      padding: 0.5rem 1.2rem;
+      font-size: 1.1rem;
+      padding: 0.6rem 1.3rem;
       text-decoration: none;
       font-family: "Traditional Arabic", serif;
       border-radius: 0;
@@ -159,14 +154,14 @@
     }
 
     .icon {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       filter: brightness(0) saturate(100%) invert(78%) sepia(19%) saturate(746%) hue-rotate(304deg) brightness(93%) contrast(89%);
       transition: filter 0.3s ease;
     }
 
     .image-box img {
-      width: 320px;
+      width: 352px;
       max-width: 100%;
       height: auto;
       border-radius: 0;
@@ -176,7 +171,7 @@
 </head>
 
 <body>
-  <!-- Top bar (same as homepage) -->
+  <!-- Top bar -->
   <div class="top-bar">
     <a href="/index.html" class="logo-link">
       <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
@@ -190,14 +185,13 @@
     </nav>
   </div>
 
-  <!-- Offset to clear fixed top bar -->
   <div class="banner-offset"></div>
 
   <!-- Main music content -->
   <main class="music-links">
     <div class="music-container">
       <div class="button-group">
-        <h2><em>Listen to Strip Lacquer ~</em></h2>
+        <h2>Listen to Strip Lacquer</h2>
 
         <a href="https://striplacquer.bandcamp.com/" class="link-button" target="_blank">
           <img src="img/bandcamp.svg" class="icon" alt="Bandcamp logo" /> Bandcamp
