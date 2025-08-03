@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="img/x-icon" href="img/favicon9.png">
+  <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
   <style>
-    /* Embed Traditional Arabic font (self-hosted) */
+    /* ------------------ Font Setup ------------------ */
     @font-face {
       font-family: "Traditional Arabic";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
@@ -16,74 +16,73 @@
       font-style: normal;
     }
 
-    body {
+    /* ------------------ Base Reset ------------------ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: "Traditional Arabic", serif;
       color: #f78f8f;
       background-color: #000;
+      line-height: 1.5;
+      max-width: 100%;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    /* Banner container */
-    .banner {
-      position: relative;
-      height: 100vh;
-      background: url('fabric-bg.jpg') center/cover no-repeat;
+    h1 {
+      font-family: Georgia, serif;
+      color: #f78f8f;
+    }
+
+    /* ------------------ Sticky Top Bar ------------------ */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
+      padding: 1rem;
+      background-color: #000;
+      z-index: 1000;
+      gap: 0.5rem;
     }
 
-    /* Sticky top bar */
-    .top-bar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 2vw; /* Responsive horizontal padding */
-  z-index: 1000;
-  gap: 2vw; /* Adds flexible space between logo and nav */
-}
+    .logo-link {
+      display: inline-block;
+      height: 80px;
+      margin-right: 0;
+    }
 
-.logo-link {
-  display: inline-block;
-  height: 120px;
-  flex-shrink: 0;
-}
+    .site-logo {
+      height: 100%;
+      display: block;
+    }
 
-.site-logo {
-  height: 100%;
-  display: block;
-}
-
-nav {
-  display: flex;
-  gap: 2vw; /* Spacing between nav items scales with screen */
-  font-size: 1rem;
-  flex-wrap: wrap;
-}
-
-
-    /* Navigation */
     nav {
       display: flex;
-      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
       font-size: 1rem;
     }
 
     nav a {
-      text-decoration: none;
       color: #f78f8f;
+      text-decoration: none;
       font-weight: bold;
       letter-spacing: 1px;
       position: relative;
       font-family: inherit;
     }
 
-    /* Underline animation */
     nav a::after {
       content: "";
       position: absolute;
@@ -99,36 +98,86 @@ nav {
       width: 100%;
     }
 
-    /* Center band image and text */
+    /* ------------------ Banner Section ------------------ */
+    .banner {
+      position: relative;
+      min-height: 100vh;
+      padding-top: 160px; /* space for fixed top bar */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background: url('fabric-bg.jpg') center/cover no-repeat;
+      text-align: center;
+    }
+
+    .banner-content {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      padding-top: 100px;
+    }
+
     .banner-content img {
-      width: 60%;
-      max-width: 800px;
+      display: block;
+      width: 100%;
+      max-width: none;
       height: auto;
-      margin-bottom: 1rem;
-      margin-top: 180px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      margin-top: 140px;
     }
 
     .banner-content h1 {
       font-size: 2rem;
       font-weight: normal;
-      color: #f78f8f;
+      text-transform: uppercase;
       letter-spacing: 2px;
-      font-family: inherit;
     }
 
-    * {
-  text-transform: none;
-}
+    /* ------------------ Responsive for Smaller Screens ------------------ */
+    @media (max-width: 768px) {
+      .banner {
+        padding-top: 160px;
+        min-height: 100vh;
+      }
 
+      .banner-content {
+        padding-top: 100px;
+      }
+
+      .banner-content img {
+        margin-top: 140px;
+      }
+
+      .top-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 0.5rem;
+        background-color: #000;
+      }
+
+      .logo-link {
+        height: 80px;
+        margin-right: 0;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header class="banner">
     <div class="top-bar">
-      <!-- Clickable logo links to homepage -->
       <a href="/index.html" class="logo-link">
-        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
+        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
       </a>
       <nav>
         <a href="/bio.html"><span style="white-space: nowrap;">◊ BIO</span></a>
@@ -136,18 +185,14 @@ nav {
         <a href="/gallery.html"><span style="white-space: nowrap;">◊ GALLERY</span></a>
         <a href="/newsletter.html"><span style="white-space: nowrap;">◊ NEWSLETTER</span></a>
         <a href="/contact.html"><span style="white-space: nowrap;">◊ CONTACT</span></a>
-
       </nav>
-      
     </div>
 
     <div class="banner-content">
-      <img src="img/SL.Couch.Square.png" alt="Band Photo">
+      <img src="img/SL.Couch.Square.png" alt="Band Photo" />
       <h1>est. 2024</h1>
     </div>
   </header>
 
 </body>
 </html>
-
-
