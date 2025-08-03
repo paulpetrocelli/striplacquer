@@ -6,7 +6,6 @@
   <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
   <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
   <style>
-    /* Font Setup */
     @font-face {
       font-family: "Traditional Arabic";
       src: url("fonts/TraditionalArabic.woff2") format("woff2"),
@@ -16,7 +15,6 @@
       font-style: normal;
     }
 
-    /* Base Reset */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -39,10 +37,10 @@
       color: #f78f8f;
     }
 
-    /* Sticky Top Bar - DESKTOP */
+    /* Transparent Top Bar - DESKTOP */
     .top-bar {
       position: fixed;
-      top: 60px;  /* adjust as needed */
+      top: 20px; /* closer to top so less vertical scroll */
       left: 0;
       width: 100%;
       height: 120px;
@@ -50,7 +48,7 @@
       align-items: center;
       padding: 0 30px;
       z-index: 1000;
-      background-color: #000;
+      background-color: transparent; /* transparent as requested */
       gap: 2vw;
       box-sizing: border-box;
     }
@@ -103,12 +101,12 @@
     .banner {
       position: relative;
       min-height: 100vh;
-      padding-top: 180px; /* 60px top + 120px bar */
+      padding-top: 140px; /* reduced from before to move content up */
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      background: url('fabric-bg.jpg') center/cover no-repeat;
+      background: #000; /* solid black, no fabric bg */
       text-align: center;
     }
 
@@ -123,7 +121,7 @@
       width: 60%;
       max-width: 800px;
       height: auto;
-      margin: 140px auto 0 auto;
+      margin: 100px auto 0 auto; /* less top margin */
       padding: 0;
       border: none;
     }
@@ -136,7 +134,7 @@
       margin-top: 1rem;
     }
 
-    /* ------------------ Responsive for Smaller Screens ------------------ */
+    /* Responsive for smaller screens */
     @media (max-width: 768px) {
       .top-bar {
         top: 0;
@@ -145,7 +143,7 @@
         align-items: center;
         padding: 1rem;
         gap: 0.5rem;
-        background-color: #000;
+        background-color: #000; /* keep solid black on mobile for contrast */
       }
 
       .logo-link {
