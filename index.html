@@ -1,132 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
-  <style>
-    @font-face {
-      font-family: "Traditional Arabic";
-      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-           url("fonts/TraditionalArabic.woff") format("woff"),
-           url("fonts/TraditionalArabic.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
+    <style>
+      @font-face {
+        font-family: "Traditional Arabic";
+        src: url("fonts/TraditionalArabic.woff2") format("woff2"),
+          url("fonts/TraditionalArabic.woff") format("woff"),
+          url("fonts/TraditionalArabic.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-    body {
-      margin: 0;
-      font-family: "Traditional Arabic", serif;
-      color: #f78f8f;
-      background-color: #000;
-    }
+      body {
+        margin: 0;
+        font-family: "Traditional Arabic", serif;
+        color: #f78f8f;
+        background-color: #000;
+      }
 
-    .top-bar {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0 2vw;
-      z-index: 1000;
-      gap: 2vw;
-    }
+      .top-bar {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 2vw;
+        z-index: 1000;
+        gap: 2vw;
+        box-sizing: border-box;
+      }
 
-    .logo-link {
-      display: inline-block;
-      height: 120px;
-      flex-shrink: 0;
-    }
+      .logo-link {
+        display: inline-block;
+        height: 120px;
+        flex-shrink: 0;
+      }
 
-    .site-logo {
-      height: 100%;
-      display: block;
-    }
+      .site-logo {
+        height: 100%;
+        display: block;
+      }
 
-    nav {
-      display: flex;
-      gap: 2vw;
-      font-size: 1rem;
-      flex-wrap: wrap;
-    }
+      nav {
+        display: flex;
+        gap: 2vw;
+        font-size: 1rem;
+        flex-wrap: wrap;
+      }
 
-    nav a {
-      text-decoration: none;
-      color: #f78f8f;
-      font-weight: bold;
-      letter-spacing: 1px;
-      position: relative;
-      font-family: inherit;
-    }
+      nav a {
+        text-decoration: none;
+        color: #f78f8f;
+        font-weight: bold;
+        letter-spacing: 1px;
+        position: relative;
+        font-family: inherit;
+      }
 
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background-color: #f78f8f;
-      transition: width 0.3s ease;
-    }
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        bottom: -4px;
+        background-color: #f78f8f;
+        transition: width 0.3s ease;
+      }
 
-    nav a:hover::after {
-      width: 100%;
-    }
+      nav a:hover::after {
+        width: 100%;
+      }
 
-    .banner-offset {
-      height: 180px;
-    }
+      .banner-offset {
+        height: 180px;
+      }
 
-    .banner-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
+      .banner-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 4rem 2rem;
+      }
 
-    .banner-content img {
-      width: 60%;
-      max-width: 800px;
-      height: auto;
-      margin-bottom: 2rem;
-    }
+      .banner-content img {
+        width: 60%;
+        max-width: 800px;
+        height: auto;
+        margin-bottom: 2rem;
+      }
 
-    .banner-content h1 {
-      font-size: 2rem;
-      font-weight: normal;
-      color: #f78f8f;
-      letter-spacing: 2px;
-      font-family: inherit;
-    }
-  </style>
-</head>
+      .banner-content h1 {
+        font-size: 2rem;
+        font-weight: normal;
+        color: #f78f8f;
+        letter-spacing: 2px;
+        font-family: inherit;
+      }
 
-<body>
+      @media (max-width: 768px) {
+        .bio-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
 
-  <div class="top-bar">
-    <a href="/index.html" class="logo-link">
-      <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
-    </a>
-    <nav>
-      <a href="/bio.html"><span style="white-space: nowrap;">◊ BIO</span></a>
-      <a href="/music.html"><span style="white-space: nowrap;">◊ MUSIC</span></a>
-      <a href="/gallery.html"><span style="white-space: nowrap;">◊ GALLERY</span></a>
-      <a href="/newsletter.html"><span style="white-space: nowrap;">◊ NEWSLETTER</span></a>
-      <a href="/contact.html"><span style="white-space: nowrap;">◊ CONTACT</span></a>
-    </nav>
-  </div>
+        .bio-text {
+          max-width: 90%;
+        }
 
-  <div class="banner-offset"></div>
+        .top-bar {
+          flex-direction: column;
+          padding: 0 2vw;
+          top: 2vh;
+        }
+        .logo-link {
+          width: 100;
+        }
+        .site-logo {
+          width: 100%;
+          object-fit: contain;
+        }
+        nav {
+          justify-content: center;
+        }
+        .banner-offset {
+          height: 30vh;
+        }
+      }
+    </style>
+  </head>
 
-  <section class="banner-content">
-    <img src="img/SL.Couch.Square.png" alt="Band Photo" />
-    <h1>est. 2024</h1>
-  </section>
+  <body>
+    <div class="top-bar">
+      <a href="/index.html" class="logo-link">
+        <img
+          src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
+          class="site-logo"
+          alt="Strip Lacquer Logo"
+        />
+      </a>
+      <nav>
+        <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
+        <a href="/music.html"
+          ><span style="white-space: nowrap">◊ MUSIC</span></a
+        >
+        <a href="/gallery.html"
+          ><span style="white-space: nowrap">◊ GALLERY</span></a
+        >
+        <a href="/newsletter.html"
+          ><span style="white-space: nowrap">◊ NEWSLETTER</span></a
+        >
+        <a href="/contact.html"
+          ><span style="white-space: nowrap">◊ CONTACT</span></a
+        >
+      </nav>
+    </div>
 
-</body>
+    <div class="banner-offset"></div>
+
+    <section class="banner-content">
+      <img src="img/SL.Couch.Square.png" alt="Band Photo" />
+      <h1>est. 2024</h1>
+    </section>
+  </body>
 </html>

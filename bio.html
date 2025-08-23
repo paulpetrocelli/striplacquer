@@ -1,170 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
-  <style>
-    @font-face {
-      font-family: "Traditional Arabic";
-      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-           url("fonts/TraditionalArabic.woff") format("woff"),
-           url("fonts/TraditionalArabic.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
+    <style>
+      @font-face {
+        font-family: "Traditional Arabic";
+        src: url("fonts/TraditionalArabic.woff2") format("woff2"),
+          url("fonts/TraditionalArabic.woff") format("woff"),
+          url("fonts/TraditionalArabic.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-    body {
-      margin: 0;
-      font-family: "Traditional Arabic", serif;
-      color: #f78f8f;
-      background-color: #000;
-    }
+      body {
+        margin: 0;
+        font-family: "Traditional Arabic", serif;
+        color: #f78f8f;
+        background-color: #000;
+      }
 
-    .top-bar {
-      position: fixed;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0 2vw;
-      z-index: 1000;
-      gap: 2vw;
-    }
-
-    .logo-link {
-      display: inline-block;
-      height: 120px;
-      flex-shrink: 0;
-    }
-
-    .site-logo {
-      height: 100%;
-      display: block;
-    }
-
-    nav {
-      display: flex;
-      gap: 2vw;
-      font-size: 1rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #f78f8f;
-      font-weight: bold;
-      letter-spacing: 1px;
-      position: relative;
-      font-family: inherit;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background-color: #f78f8f;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .banner-offset {
-      height: 180px;
-    }
-
-    .bio-section {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 5rem;
-      padding: 3rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-    }
-
-    .bio-text {
-  max-width: 500px;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  font-style: italic;
-  position: relative;
-  z-index: 1;
-}
-
-.bio-image img {
-  width: 500px; /* slightly larger image */
-  max-width: none;
-  height: auto;
-  display: block;
-  margin-left: -120px; /* deeper overlap into the text area */
-  z-index: 0;
-  position: relative;
-}
-
-
-
-    @media (max-width: 768px) {
-      .bio-section {
-        flex-direction: column;
+      .top-bar {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
         align-items: center;
-        text-align: center;
+        padding: 0 2vw;
+        z-index: 1000;
+        gap: 2vw;
+        box-sizing: border-box;
+      }
+
+      .logo-link {
+        display: inline-block;
+        height: 120px;
+        flex-shrink: 0;
+      }
+
+      .site-logo {
+        height: 100%;
+        display: block;
+      }
+
+      nav {
+        display: flex;
+        gap: 2vw;
+        font-size: 1rem;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #f78f8f;
+        font-weight: bold;
+        letter-spacing: 1px;
+        position: relative;
+        font-family: inherit;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        bottom: -4px;
+        background-color: #f78f8f;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      .banner-offset {
+        height: 180px;
+      }
+
+      .bio-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5rem;
+        padding: 3rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
       }
 
       .bio-text {
-        max-width: 90%;
+        max-width: 500px;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        font-style: italic;
+        position: relative;
+        z-index: 1;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="top-bar">
-    <a href="/index.html" class="logo-link">
-      <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo" />
-    </a>
-    <nav>
-      <a href="/bio.html"><span style="white-space: nowrap;">◊ BIO</span></a>
-      <a href="/music.html"><span style="white-space: nowrap;">◊ MUSIC</span></a>
-      <a href="/gallery.html"><span style="white-space: nowrap;">◊ GALLERY</span></a>
-      <a href="/newsletter.html"><span style="white-space: nowrap;">◊ NEWSLETTER</span></a>
-      <a href="/contact.html"><span style="white-space: nowrap;">◊ CONTACT</span></a>
-    </nav>
-  </div>
+      .bio-image img {
+        width: 500px; /* slightly larger image */
+        max-width: none;
+        height: auto;
+        display: block;
+        margin-left: -120px; /* deeper overlap into the text area */
+        z-index: 0;
+        position: relative;
+      }
 
-  <div class="banner-offset"></div>
+      @media (max-width: 768px) {
+        .bio-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          flex-direction: column-reverse;
+        }
 
-  <main class="bio-section">
-    <div class="bio-text">
-      <i>
-        Gasping for air through the grip of a shiny leather glove.<br>
-        Dragging cellophane wrapped glass against concrete.<br>
-        An open wound shrouded in a sleek satin veil.<br><br>
+        .bio-text {
+          max-width: 90%;
+        }
 
-        Toronto-based band Strip Lacquer are an act who are comfortable existing in unease.<br><br>
+        .top-bar {
+          flex-direction: column;
+          padding: 0 2vw;
+          top: 2vh;
+        }
+        .logo-link {
+          width: 100;
+        }
+        .site-logo {
+          width: 100%;
+          object-fit: contain;
+        }
+        nav {
+          justify-content: center;
+        }
+        .banner-offset {
+          height: 30vh;
+        }
+      }
+    </style>
+  </head>
 
-        Drawing from no wave experimentation, industrial abrasiveness and early goth textures - Strip Lacquer is Toronto’s most recent post punk outfit. They encompasses sharp emotional songwriting with nuanced dissonance and a diverse sonic palette.<br><br>
-
-        Vocalist Robin and guitarist Paul met working together at a Toronto record store. Bonding over literature, Czech new wave film, 50’s fetish illustration and surrealist photography, the two began a romantic relationship and soon after started a band. <br><br>
-
-        Their musical influences include Fad Gadget, Malaria!, The Birthday Party, Chris and Cosey, HTRK, Section 25, Josef K, DAF and Broadcast. <br><br>
-
-        Strip Lacquer is laced in a delicate yet murky disposition, shifting seamlessly from amoral to vulnerable, warped by a desire to dissect the grotesque.
-      </i>
+  <body>
+    <div class="top-bar">
+      <a href="/index.html" class="logo-link">
+        <img
+          src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
+          class="site-logo"
+          alt="Strip Lacquer Logo"
+        />
+      </a>
+      <nav>
+        <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
+        <a href="/music.html"
+          ><span style="white-space: nowrap">◊ MUSIC</span></a
+        >
+        <a href="/gallery.html"
+          ><span style="white-space: nowrap">◊ GALLERY</span></a
+        >
+        <a href="/newsletter.html"
+          ><span style="white-space: nowrap">◊ NEWSLETTER</span></a
+        >
+        <a href="/contact.html"
+          ><span style="white-space: nowrap">◊ CONTACT</span></a
+        >
+      </nav>
     </div>
 
-    <div class="bio-image">
-      <img src="img/shoot1.western2.edited.jpg" alt="Band Photo" />
-    </div>
-  </main>
-</body>
+    <div class="banner-offset"></div>
+
+    <main class="bio-section">
+      <div class="bio-text">
+        <i>
+          Gasping for air through the grip of a shiny leather glove.<br />
+          Dragging cellophane wrapped glass against concrete.<br />
+          An open wound shrouded in a sleek satin veil.<br /><br />
+
+          Toronto-based band Strip Lacquer are an act who are comfortable
+          existing in unease.<br /><br />
+
+          Drawing from no wave experimentation, industrial abrasiveness and
+          early goth textures - Strip Lacquer is Toronto’s most recent post punk
+          outfit. They encompasses sharp emotional songwriting with nuanced
+          dissonance and a diverse sonic palette.<br /><br />
+
+          Vocalist Robin and guitarist Paul met working together at a Toronto
+          record store. Bonding over literature, Czech new wave film, 50’s
+          fetish illustration and surrealist photography, the two began a
+          romantic relationship and soon after started a band. <br /><br />
+
+          Their musical influences include Fad Gadget, Malaria!, The Birthday
+          Party, Chris and Cosey, HTRK, Section 25, Josef K, DAF and Broadcast.
+          <br /><br />
+
+          Strip Lacquer is laced in a delicate yet murky disposition, shifting
+          seamlessly from amoral to vulnerable, warped by a desire to dissect
+          the grotesque.
+        </i>
+      </div>
+
+      <div class="bio-image">
+        <img src="img/shoot1.western2.edited.jpg" alt="Band Photo" />
+      </div>
+    </main>
+  </body>
 </html>

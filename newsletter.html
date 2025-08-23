@@ -1,210 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-  <link rel="icon" type="img/x-icon" href="img/favicon9.png">
-  <style>
-    @font-face {
-      font-family: "Traditional Arabic";
-      src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-           url("fonts/TraditionalArabic.woff") format("woff"),
-           url("fonts/TraditionalArabic.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Traditional Arabic", serif;
-      color: #f78f8f;
-      background-color: #000;
-    }
-
-    .banner {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    /* Sticky top bar */
-    .top-bar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 2vw; /* Responsive horizontal padding */
-  z-index: 1000;
-  gap: 2vw; /* Adds flexible space between logo and nav */
-}
-
-.logo-link {
-  display: inline-block;
-  height: 120px;
-  flex-shrink: 0;
-}
-
-.site-logo {
-  height: 100%;
-  display: block;
-}
-
-nav {
-  display: flex;
-  gap: 2vw; /* Spacing between nav items scales with screen */
-  font-size: 1rem;
-  flex-wrap: wrap;
-}
-
-    nav a {
-      text-decoration: none;
-      color: #f78f8f;
-      font-weight: bold;
-      letter-spacing: 1px;
-      position: relative;
-      font-family: inherit;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -4px;
-      background-color: #f78f8f;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .newsletter-container {
-      max-width: 400px;
-      width: 90%;
-      padding: 30px;
-      margin-top: 180px;
-      border: 2px solid #f78f8f;
-      background: transparent;
-      text-align: center;
-      color: #f78f8f;
-      box-sizing: border-box;
-    }
-
-    .newsletter-title {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-
-    .newsletter-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .newsletter-form input[type="email"] {
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #f78f8f;
-      border-radius: 4px;
-      background: transparent;
-      color: #f78f8f;
-      text-align: center;
-      font-family: "Traditional Arabic", serif;
-      box-sizing: border-box;
-    }
-
-    .newsletter-form input[type="email"]::placeholder {
-      color: #f78f8f;
-      opacity: 0.8;
-    }
-
-    .newsletter-form button {
-      padding: 12px;
-      font-size: 1rem;
-      border: 2px solid #f78f8f;
-      border-radius: 4px;
-      background: transparent;
-      color: #f78f8f;
-      cursor: pointer;
-      font-family: "Traditional Arabic", serif;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .newsletter-form button:hover {
-      background: #f78f8f;
-      color: #000;
-    }
-
-    .success-message {
-      font-size: 1.5rem;
-      margin-top: 15px;
-      display: none;
-    }
-  </style>
-</head>
-<body>
-
-  <header class="banner">
-    <div class="top-bar">
-      <a href="/index.html" class="logo-link">
-        <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
-      </a>
-      <nav>
-        <a href="/bio.html"><span style="white-space: nowrap;">◊ BIO</span></a>
-        <a href="/music.html"><span style="white-space: nowrap;">◊ MUSIC</span></a>
-        <a href="/gallery.html"><span style="white-space: nowrap;">◊ GALLERY</span></a>
-        <a href="/newsletter.html"><span style="white-space: nowrap;">◊ NEWSLETTER</span></a>
-        <a href="/contact.html"><span style="white-space: nowrap;">◊ CONTACT</span></a>
-
-      </nav>
-    </div>
-
-    <section class="newsletter-container">
-      <h1 class="newsletter-title">Newsletter Sign Up</h1>
-      <form id="newsletterForm" action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe" method="post" class="newsletter-form">
-        <input type="email" name="fields[email]" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <div id="successMessage" class="success-message">Success.</div>
-    </section>
-  </header>
-
-  <script>
-    const form = document.getElementById('newsletterForm');
-    const successMessage = document.getElementById('successMessage');
-
-    form.addEventListener('submit', async function(event) {
-      event.preventDefault(); // Stop normal form submission
-
-      const formData = new FormData(form);
-      const actionUrl = form.getAttribute('action');
-
-      try {
-        const response = await fetch(actionUrl, {
-          method: 'POST',
-          body: formData
-        });
-
-        if (response.ok) {
-          // Hide the input and button, show success text
-          form.style.display = 'none';
-          successMessage.style.display = 'block';
-        } else {
-          alert('There was an issue subscribing. Please try again.');
-        }
-      } catch (error) {
-        alert('Network error. Please try again.');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
+    <link rel="icon" type="img/x-icon" href="img/favicon9.png" />
+    <style>
+      @font-face {
+        font-family: "Traditional Arabic";
+        src: url("fonts/TraditionalArabic.woff2") format("woff2"),
+          url("fonts/TraditionalArabic.woff") format("woff"),
+          url("fonts/TraditionalArabic.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
       }
-    });
-  </script>
 
-</body>
+      body {
+        margin: 0;
+        font-family: "Traditional Arabic", serif;
+        color: #f78f8f;
+        background-color: #000;
+      }
+
+      .banner {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      /* Sticky top bar */
+      .top-bar {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 2vw; /* Responsive horizontal padding */
+        z-index: 1000;
+        gap: 2vw; /* Adds flexible space between logo and nav */
+        box-sizing: border-box;
+      }
+
+      .logo-link {
+        display: inline-block;
+        height: 120px;
+        flex-shrink: 0;
+      }
+
+      .site-logo {
+        height: 100%;
+        display: block;
+      }
+
+      nav {
+        display: flex;
+        gap: 2vw; /* Spacing between nav items scales with screen */
+        font-size: 1rem;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #f78f8f;
+        font-weight: bold;
+        letter-spacing: 1px;
+        position: relative;
+        font-family: inherit;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        background-color: #f78f8f;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      .newsletter-container {
+        max-width: 400px;
+        width: 90%;
+        padding: 30px;
+        margin-top: 180px;
+        border: 2px solid #f78f8f;
+        background: transparent;
+        text-align: center;
+        color: #f78f8f;
+        box-sizing: border-box;
+      }
+
+      .newsletter-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .newsletter-form input[type="email"] {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #f78f8f;
+        border-radius: 4px;
+        background: transparent;
+        color: #f78f8f;
+        text-align: center;
+        font-family: "Traditional Arabic", serif;
+        box-sizing: border-box;
+      }
+
+      .newsletter-form input[type="email"]::placeholder {
+        color: #f78f8f;
+        opacity: 0.8;
+      }
+
+      .newsletter-form button {
+        padding: 12px;
+        font-size: 1rem;
+        border: 2px solid #f78f8f;
+        border-radius: 4px;
+        background: transparent;
+        color: #f78f8f;
+        cursor: pointer;
+        font-family: "Traditional Arabic", serif;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .newsletter-form button:hover {
+        background: #f78f8f;
+        color: #000;
+      }
+
+      .success-message {
+        font-size: 1.5rem;
+        margin-top: 15px;
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .top-bar {
+          flex-direction: column;
+          padding: 0 2vw;
+          top: 2vh;
+        }
+        .logo-link {
+          width: 100;
+        }
+        .site-logo {
+          width: 100%;
+          object-fit: contain;
+        }
+        nav {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="banner">
+      <div class="top-bar">
+        <a href="/index.html" class="logo-link">
+          <img
+            src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
+            class="site-logo"
+            alt="Strip Lacquer Logo"
+          />
+        </a>
+        <nav>
+          <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
+          <a href="/music.html"
+            ><span style="white-space: nowrap">◊ MUSIC</span></a
+          >
+          <a href="/gallery.html"
+            ><span style="white-space: nowrap">◊ GALLERY</span></a
+          >
+          <a href="/newsletter.html"
+            ><span style="white-space: nowrap">◊ NEWSLETTER</span></a
+          >
+          <a href="/contact.html"
+            ><span style="white-space: nowrap">◊ CONTACT</span></a
+          >
+        </nav>
+      </div>
+
+      <section class="newsletter-container">
+        <h1 class="newsletter-title">Newsletter Sign Up</h1>
+        <form
+          id="newsletterForm"
+          action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe"
+          method="post"
+          class="newsletter-form"
+        >
+          <input
+            type="email"
+            name="fields[email]"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div id="successMessage" class="success-message">Success.</div>
+      </section>
+    </header>
+
+    <script>
+      const form = document.getElementById("newsletterForm");
+      const successMessage = document.getElementById("successMessage");
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault(); // Stop normal form submission
+
+        const formData = new FormData(form);
+        const actionUrl = form.getAttribute("action");
+
+        try {
+          const response = await fetch(actionUrl, {
+            method: "POST",
+            body: formData,
+          });
+
+          if (response.ok) {
+            // Hide the input and button, show success text
+            form.style.display = "none";
+            successMessage.style.display = "block";
+          } else {
+            alert("There was an issue subscribing. Please try again.");
+          }
+        } catch (error) {
+          alert("Network error. Please try again.");
+        }
+      });
+    </script>
+  </body>
 </html>
