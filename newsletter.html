@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-    <link rel="icon" type="img/x-icon" href="img/favicon9.png" />
+    <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
     <style>
       @font-face {
         font-family: "Traditional Arabic";
@@ -22,15 +22,6 @@
         background-color: #000;
       }
 
-      .banner {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
       /* Sticky top bar */
       .top-bar {
         position: fixed;
@@ -78,6 +69,7 @@
         width: 0;
         height: 2px;
         bottom: -4px;
+        left: 0;
         background-color: #f78f8f;
         transition: width 0.3s ease;
       }
@@ -86,11 +78,16 @@
         width: 100%;
       }
 
+      /* offset below fixed nav */
+      .banner-offset {
+        height: 180px;
+      }
+
       .newsletter-container {
         max-width: 400px;
         width: 90%;
         padding: 30px;
-        margin-top: 180px;
+        margin: 0 auto;
         border: 2px solid #f78f8f;
         background: transparent;
         text-align: center;
@@ -165,55 +162,55 @@
         nav {
           justify-content: center;
         }
+        .banner-offset {
+          height: 30vh;
+        }
       }
     </style>
   </head>
   <body>
-    <header class="banner">
-      <div class="top-bar">
-        <a href="/index.html" class="logo-link">
-          <img
-            src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
-            class="site-logo"
-            alt="Strip Lacquer Logo"
-          />
+    <!-- top nav -->
+    <div class="top-bar">
+      <a href="/index.html" class="logo-link">
+        <img
+          src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
+          class="site-logo"
+          alt="Strip Lacquer Logo"
+        />
+      </a>
+      <nav>
+        <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
+        <a href="/music.html"><span style="white-space: nowrap">◊ MUSIC</span></a>
+        <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">
+          <span style="white-space: nowrap">◊ INSTAGRAM</span>
         </a>
-        <nav>
-          <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
-          <a href="/music.html"
-            ><span style="white-space: nowrap">◊ MUSIC</span></a
-          >
-          <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">
-            <span style="white-space: nowrap">◊ INSTAGRAM</span>
-          </a>        
-          <a href="/newsletter.html"
-            ><span style="white-space: nowrap">◊ NEWSLETTER</span></a
-          >
-          <a href="/contact.html"
-            ><span style="white-space: nowrap">◊ CONTACT</span></a
-          >
-        </nav>
-      </div>
+        <a href="/newsletter.html"><span style="white-space: nowrap">◊ NEWSLETTER</span></a>
+        <a href="/contact.html"><span style="white-space: nowrap">◊ CONTACT</span></a>
+      </nav>
+    </div>
 
-      <section class="newsletter-container">
-        <h1 class="newsletter-title">Newsletter Sign Up</h1>
-        <form
-          id="newsletterForm"
-          action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe"
-          method="post"
-          class="newsletter-form"
-        >
-          <input
-            type="email"
-            name="fields[email]"
-            placeholder="Enter your email"
-            required
-          />
-          <button type="submit">Subscribe</button>
-        </form>
-        <div id="successMessage" class="success-message">Success.</div>
-      </section>
-    </header>
+    <!-- offset for fixed nav -->
+    <div class="banner-offset"></div>
+
+    <!-- newsletter content -->
+    <section class="newsletter-container">
+      <h1 class="newsletter-title">Newsletter Sign Up</h1>
+      <form
+        id="newsletterForm"
+        action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe"
+        method="post"
+        class="newsletter-form"
+      >
+        <input
+          type="email"
+          name="fields[email]"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="successMessage" class="success-message">Success.</div>
+    </section>
 
     <script>
       const form = document.getElementById("newsletterForm");
@@ -232,7 +229,6 @@
           });
 
           if (response.ok) {
-            // Hide the input and button, show success text
             form.style.display = "none";
             successMessage.style.display = "block";
           } else {
