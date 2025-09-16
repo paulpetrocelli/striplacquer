@@ -88,12 +88,11 @@
         margin: 0 auto;
       }
 
+      /* 🚀 Force same behavior as bio page */
       .banner-content img {
-        width: 500px;     /* desktop */
-        max-width: 100%;  /* shrink if screen is smaller */
-        height: auto;     /* maintain aspect ratio */
+        width: 100%;
+        height: auto;
         display: block;
-        margin: 0 auto 2rem auto;
       }
 
       .banner-content h1 {
@@ -102,6 +101,7 @@
         color: #f78f8f;
         letter-spacing: 2px;
         font-family: inherit;
+        margin-top: 1.5rem;
       }
 
       @media (max-width: 768px) {
@@ -126,13 +126,6 @@
 
         .banner-offset {
           height: 30vh;
-        }
-
-        /* Make homepage banner behave like bio page */
-        .banner-content img {
-          width: 100%;     /* span edge to edge */
-          max-width: 100%;
-          height: auto;
         }
       }
     </style>
