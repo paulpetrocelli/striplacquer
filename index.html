@@ -91,10 +91,9 @@
       }
 
       .banner-content img {
-        width: 500px;   /* desktop size */
-        height: auto;   /* keeps ratio */
+        width: 500px;   /* desktop width */
+        height: auto;   /* keeps aspect ratio */
         display: block;
-        max-width: 100%; /* scales down if smaller screen */
         margin: 0 auto 2rem auto;
       }
 
@@ -130,10 +129,11 @@
           height: 30vh;
         }
 
+        /* key fix: make image behave like bio page */
         .banner-content img {
-          width: 90%;     /* just like the bio page */
-          max-width: 400px;
-          height: auto;
+          width: 100%;       /* span full width */
+          max-width: 100%;   /* no shrinking constraint */
+          height: auto;      /* keep ratio */
           margin-bottom: 1.5rem;
         }
       }
