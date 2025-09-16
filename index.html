@@ -82,17 +82,16 @@
       }
 
       .banner-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         text-align: center;
         padding: 3rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
       }
 
       .banner-content img {
-        width: 500px;   /* desktop width */
-        height: auto;   /* keeps aspect ratio */
+        width: 500px;     /* desktop */
+        max-width: 100%;  /* shrink if screen is smaller */
+        height: auto;     /* maintain aspect ratio */
         display: block;
         margin: 0 auto 2rem auto;
       }
@@ -129,12 +128,11 @@
           height: 30vh;
         }
 
-        /* key fix: make image behave like bio page */
+        /* Make homepage banner behave like bio page */
         .banner-content img {
-          width: 100%;       /* span full width */
-          max-width: 100%;   /* no shrinking constraint */
-          height: auto;      /* keep ratio */
-          margin-bottom: 1.5rem;
+          width: 100%;     /* span edge to edge */
+          max-width: 100%;
+          height: auto;
         }
       }
     </style>
