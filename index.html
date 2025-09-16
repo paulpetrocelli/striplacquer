@@ -82,15 +82,14 @@
       }
 
       .banner-content {
+        padding: 0;
+        margin: 0;
+        max-width: none;
         text-align: center;
-        padding: 3rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
       }
 
-      /* 🚀 Force same behavior as bio page */
       .banner-content img {
-        width: 100%;
+        width: 100vw;
         height: auto;
         display: block;
       }
@@ -105,25 +104,31 @@
       }
 
       @media (max-width: 768px) {
+        .bio-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .bio-text {
+          max-width: 90%;
+        }
+
         .top-bar {
           flex-direction: column;
           padding: 0 2vw;
           top: 2vh;
         }
-
         .logo-link {
           width: 100%;
         }
-
         .site-logo {
           width: 100%;
           object-fit: contain;
         }
-
         nav {
           justify-content: center;
         }
-
         .banner-offset {
           height: 30vh;
         }
