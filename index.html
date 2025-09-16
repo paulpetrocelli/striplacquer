@@ -81,15 +81,19 @@
         height: 180px;
       }
 
+      /* Banner container now full-width like bio page */
       .banner-content {
         padding: 0;
         margin: 0;
         max-width: none;
+        width: 100%;
         text-align: center;
       }
 
+      /* Banner image edge-to-edge, keeps aspect ratio */
       .banner-content img {
-        width: 100vw;
+        width: 100%;
+        max-width: none;
         height: auto;
         display: block;
       }
@@ -104,31 +108,25 @@
       }
 
       @media (max-width: 768px) {
-        .bio-section {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-
-        .bio-text {
-          max-width: 90%;
-        }
-
         .top-bar {
           flex-direction: column;
           padding: 0 2vw;
           top: 2vh;
         }
+
         .logo-link {
           width: 100%;
         }
+
         .site-logo {
           width: 100%;
           object-fit: contain;
         }
+
         nav {
           justify-content: center;
         }
+
         .banner-offset {
           height: 30vh;
         }
