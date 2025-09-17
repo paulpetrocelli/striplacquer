@@ -28,7 +28,7 @@ html {
 body {
   margin: 0;
   background-color: #000;
-  color: #ff8989;
+  color: #f88288;
   font-family: "Traditional Arabic Regular", serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -37,7 +37,7 @@ body {
 
 h1 {
   font-family: "Georgia";
-  color: #ff8989;
+  color: #f88288;
 }
 
 /* ------------------ Header & Navigation ------------------ */
@@ -74,7 +74,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #ff8989;
+  color: #f88288;
   font-weight: bold;
   letter-spacing: 1px;
   position: relative;
@@ -88,7 +88,7 @@ nav a::after {
   height: 2px;
   left: 0;
   bottom: -4px;
-  background-color: #ff8989;
+  background-color: #f88288;
   transition: width 0.3s ease;
 }
 
@@ -164,8 +164,8 @@ nav a:hover::after {
   align-items: center;
   gap: 0.75rem;
   background-color: transparent;
-  border: 2px solid #ff8989;
-  color: #ff8989;
+  border: 2px solid #f88288;
+  color: #f88288;
   font-size: 1rem;
   padding: 0.5rem 1.2rem;
   text-decoration: none;
@@ -176,7 +176,7 @@ nav a:hover::after {
 }
 
 .link-button:hover {
-  background-color: #ff8989;
+  background-color: #f88288;
   color: #000;
 }
 
@@ -207,11 +207,11 @@ nav a:hover::after {
   max-width: 400px;
   margin: 150px auto 0 auto;
   padding: 30px;
-  border: 2px solid #ff8989;
+  border: 2px solid #f88288;
   background: transparent;
   text-align: center;
   font-family: "Traditional Arabic Regular", serif;
-  color: #ff8989;
+  color: #f88288;
 }
 
 .newsletter-title {
@@ -228,33 +228,33 @@ nav a:hover::after {
 .newsletter-form input[type="email"] {
   padding: 10px;
   font-size: 18px;
-  border: 1px solid #ff8989;
+  border: 1px solid #f88288;
   border-radius: 4px;
   background: transparent;
-  color: #ff8989;
+  color: #f88288;
   text-align: center;
   font-family: "Traditional Arabic Regular", serif;
 }
 
 .newsletter-form input[type="email"]::placeholder {
-  color: #ff8989;
+  color: #f88288;
   opacity: 0.8;
 }
 
 .newsletter-form button {
   padding: 12px;
   font-size: 18px;
-  border: 2px solid #ff8989;
+  border: 2px solid #f88288;
   border-radius: 4px;
   background: transparent;
-  color: #ff8989;
+  color: #f88288;
   cursor: pointer;
   font-family: "Traditional Arabic Regular", serif;
   transition: background 0.3s, color 0.3s;
 }
 
 .newsletter-form button:hover {
-  background: #ff8989;
+  background: #f88288;
   color: #000;
 }
 
