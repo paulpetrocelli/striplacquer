@@ -5,13 +5,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BIO — Strip Lacquer</title>
-
 <link rel="icon" type="image/x-icon" href="img/favicon9.png">
-<link rel="stylesheet" href="styles.css">
+<style>
+/* ------------------ GLOBAL RESET ------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------ BODY ------------------ */
+body {
+  font-family: "Traditional Arabic", serif;
+  color: #dbdbdb;
+  line-height: 1.5;
+  background-color: #000;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------ BACKGROUND HERO (same as index) ------------------ */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/Texturelabs_LensFX_232XL.jpg");
+  background-size: 80% auto;  /* zoom out, same as index */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  filter: contrast(110%) brightness(100%);
+  z-index: 0;
+}
+
+/* ------------------ LEFT COLUMN / NAV ------------------ */
+.left-column {
+  position: fixed;
+  top: 25px;
+  left: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.logo-link { display: block; height: 150px; }
+.site-logo { height: 100%; display: block; }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 80px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #dbdbdb;
+  font-family: "Edition", serif;
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  line-height: 0.9;
+}
+
+/* ------------------ CENTERED BIO ROW ------------------ */
+.bio-wrapper {
+  position: fixed;              /* like index .home-wrapper */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;          /* vertical alignment */
+  justify-content: center;      /* horizontal alignment */
+  gap: 3rem;
+  max-width: 90vw;
+  z-index: 500;
+}
+
+/* Slight asymmetry: text left, image right */
+.bio-text {
+  flex: 1 1 55%;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.bio-image {
+  flex: 0 0 45%;
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  display: block;
+  object-fit: contain;
+}
+
+/* ------------------ MOBILE ------------------ */
+@media (max-width: 768px) {
+  .left-column { position: absolute; }
+  nav a { font-size: 2rem; }
+
+  .bio-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    width: 80%;
+  }
+
+  .bio-text { font-size: 1rem; }
+  .bio-image { width: 80%; }
+}
+</style>
 </head>
 
 <body>
 
+<!-- Background (single div, identical to index) -->
+<div class="hero"></div>
+
+<!-- Sidebar -->
 <div class="left-column">
   <a href="/index.html" class="logo-link">
     <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
@@ -25,29 +147,15 @@
   </nav>
 </div>
 
-<div class="home-wrapper">
-  <div class="bio-container-row">
-    <div class="bio-text">
-      Toronto-based band Strip Lacquer exist in the tension of unease.<br><br>
-      Drawing from art rock experimentation, industrial abrasiveness and post-punk ethos, they encompass sharp emotional songwriting with nuanced dissonance and a diverse sonic palette.<br><br>
-      Laced in a delicate yet murky disposition, shifting seamlessly from amoral to vulnerable, fixated by a desire to dissect the grotesque.
-    </div>
-    <div class="bio-image">
-      <img src="img/shoot1.western2.edited.jpg" alt="Band Photo">
-    </div>
+<!-- Centered Bio Text + Image -->
+<div class="bio-wrapper">
+  <div class="bio-text">
+    Toronto-based band Strip Lacquer exist in the tension of unease.<br><br>
+    Drawing from art rock experimentation, industrial abrasiveness and post-punk ethos, they encompass sharp emotional songwriting with nuanced dissonance and a diverse sonic palette.<br><br>
+    Laced in a delicate yet murky disposition, shifting seamlessly from amoral to vulnerable, fixated by a desire to dissect the grotesque.
   </div>
-</div>
-
-<div class="home-center"> <!-- Reuse index-style centering -->
-  <div class="bio-container-row">
-    <div class="bio-text">
-      Toronto-based band Strip Lacquer exist in the tension of unease.<br><br>
-      Drawing from art rock experimentation, industrial abrasiveness and post-punk ethos, they encompass sharp emotional songwriting with nuanced dissonance and a diverse sonic palette.<br><br>
-      Laced in a delicate yet murky disposition, shifting seamlessly from amoral to vulnerable, fixated by a desire to dissect the grotesque.
-    </div>
-    <div class="bio-image">
-      <img src="img/shoot1.western2.edited.jpg" alt="Band Photo">
-    </div>
+  <div class="bio-image">
+    <img src="img/shoot1.western2.edited.jpg" alt="Band Photo">
   </div>
 </div>
 
