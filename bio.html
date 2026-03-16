@@ -1,191 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>𝑺𝒕𝒓𝒊𝒑 𝑳𝒂𝒄𝒒𝒖𝒆𝒓</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
-    <style>
-      @font-face {
-        font-family: "Traditional Arabic";
-        src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-          url("fonts/TraditionalArabic.woff") format("woff"),
-          url("fonts/TraditionalArabic.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-      }
 
-      body {
-        margin: 0;
-        font-family: "Traditional Arabic", serif;
-        color: #c9c9c9;
-        background-color: #000;
-      }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strip Lacquer</title>
 
-      .top-bar {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 2vw;
-        z-index: 1000;
-        gap: 2vw;
-        box-sizing: border-box;
-      }
+<link rel="icon" type="image/x-icon" href="img/favicon9.png">
+<link rel="stylesheet" href="css/styles.css">
 
-      .logo-link {
-        display: inline-block;
-        height: 120px;
-        flex-shrink: 0;
-      }
+</head>
 
-      .site-logo {
-        height: 100%;
-        display: block;
-      }
+<body>
 
-      nav {
-        display: flex;
-        gap: 2vw;
-        font-size: 1rem;
-        flex-wrap: wrap;
-      }
+<div class="left-column">
 
-      nav a {
-        text-decoration: none;
-        color: #c9c9c9;
-        font-weight: bold;
-        letter-spacing: 1px;
-        position: relative;
-        font-family: inherit;
-      }
+<a href="/index.html" class="logo-link">
+<img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
+class="site-logo"
+alt="Strip Lacquer Logo">
+</a>
 
-      nav a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        left: 0;
-        bottom: -4px;
-        background-color: #adadad;
-        transition: width 0.3s ease;
-      }
+<nav>
+<a href="/bio.html">BIO</a>
+<a href="/music.html">MUSIC</a>
+<a href="https://www.instagram.com/striplacquer" target="_blank">INSTAGRAM</a>
+<a href="/newsletter.html">NEWSLETTER</a>
+<a href="/contact.html">CONTACT</a>
+</nav>
 
-      nav a:hover::after {
-        width: 100%;
-      }
+</div>
 
-      .banner-offset {
-        height: 180px;
-      }
 
-      .bio-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 5rem;
-        padding: 3rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        flex-wrap: wrap;
-      }
+<div class="main-content">
 
-      .bio-text {
-        max-width: 500px;
-        font-size: 1.2rem;
-        line-height: 1.8;
-        font-style: italic;
-        position: relative;
-        z-index: 1;
-      }
+<div class="bio-section">
 
-      .bio-image img {
-        width: 500px; /* slightly larger image */
-        max-width: none;
-        height: auto;
-        display: block;
-        margin-left: -120px; /* deeper overlap into the text area */
-        z-index: 0;
-        position: relative;
-      }
+<div class="bio-text">
 
-      @media (max-width: 768px) {
-        .bio-section {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          flex-direction: column-reverse;
-        }
+<i>
+Toronto-based band Strip Lacquer exist in the tension of unease.<br><br>
 
-        .bio-text {
-          max-width: 90%;
-        }
+Drawing from art rock experimentation, industrial abrasiveness and post-punk ethos, they encompass sharp emotional songwriting with nuanced dissonance and a diverse sonic palette.<br><br>
 
-        .top-bar {
-          flex-direction: column;
-          padding: 0 2vw;
-          top: 2vh;
-        }
-        .logo-link {
-          width: 100;
-        }
-        .site-logo {
-          width: 100%;
-          object-fit: contain;
-        }
-        nav {
-          justify-content: center;
-        }
-        .banner-offset {
-          height: 30vh;
-        }
-      }
-    </style>
-  </head>
+Laced in a delicate yet murky disposition, shifting seamlessly from amoral to vulnerable, fixated by a desire to dissect the grotesque.
+</i>
 
-  <body>
-    <div class="top-bar">
-      <a href="/index.html" class="logo-link">
-        <img
-          src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
-          class="site-logo"
-          alt="Strip Lacquer Logo"
-        />
-      </a>
-      <nav>
-        <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
-        <a href="/music.html"
-          ><span style="white-space: nowrap">◊ MUSIC</span></a
-        >
-        <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">
-          <span style="white-space: nowrap">◊ INSTAGRAM</span>
-        </a>        
-        <a href="/newsletter.html"
-          ><span style="white-space: nowrap">◊ NEWSLETTER</span></a
-        >
-        <a href="/contact.html"
-          ><span style="white-space: nowrap">◊ CONTACT</span></a
-        >
-      </nav>
-    </div>
+</div>
 
-    <div class="banner-offset"></div>
 
-    <main class="bio-section">
-      <div class="bio-text">
-        <i>
-          Toronto-based band Strip Lacquer exist in the tension of unease. <br><br>
-          Drawing from art rock experimentation, industrial abrasiveness and post-punk ethos, they encompass sharp emotional songwriting with nuanced dissonance and a diverse sonic palette. <br> <br>
-          Laced in a delicate yet murky disposition, shifting seamlessly from amoral to vulnerable, fixated by a desire to dissect the grotesque.
-        </i>
-      </div>
+<div class="bio-image">
+<img src="img/shoot1.western2.edited.jpg" alt="Band Photo">
+</div>
 
-      <div class="bio-image">
-        <img src="img/shoot1.western2.edited.jpg" alt="Band Photo" />
-      </div>
-    </main>
-  </body>
+</div>
+
+</div>
+
+</body>
 </html>

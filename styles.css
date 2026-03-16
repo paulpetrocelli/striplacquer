@@ -259,3 +259,40 @@ nav a{
   }
 
 }
+
+/* ------------------ BIO PAGE ------------------ */
+
+.bio-section{
+  display:flex;
+  gap:5rem;
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+
+.bio-text{
+  max-width:500px;
+  font-size:1.2rem;
+  line-height:1.8;
+  font-style:italic;
+}
+
+.bio-image img{
+  width:500px;
+  max-width:100%;
+  height:auto;
+  margin-left:-120px;
+}
+
+@media (max-width:768px){
+
+  .bio-section{
+    flex-direction:column-reverse;
+    align-items:center;
+    text-align:center;
+  }
+
+  .bio-image img{
+    margin-left:0;
+  }
+
+}
