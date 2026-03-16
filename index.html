@@ -4,9 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑹</title>
+<title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
 <link rel="icon" type="image/x-icon" href="img/favicon9.png">
-<link rel="stylesheet" href="styles.css">
 <style>
 /* ------------------ GLOBAL RESET ------------------ */
 *,
@@ -17,19 +16,30 @@
   padding: 0;
 }
 
-/* ------------------ BODY / BACKGROUND ------------------ */
+/* ------------------ BODY ------------------ */
 body {
   font-family: "Traditional Arabic", serif;
   line-height: 1.5;
   color: #dbdbdb;
   background-color: #000;
+  overflow-x: hidden;
+}
+
+/* ------------------ BACKGROUND HERO ------------------ */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-image: url("img/Texturelabs_LensFX_232XL.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 80% auto;  /* zoom out the background */
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: screen;
   filter: contrast(110%) brightness(100%);
+  z-index: 0;
 }
 
 /* ------------------ LEFT COLUMN / NAV ------------------ */
@@ -61,7 +71,6 @@ nav {
 }
 
 nav a {
-  display: block;
   text-decoration: none;
   color: #dbdbdb;
   font-family: "Edition", serif;
@@ -71,19 +80,16 @@ nav a {
   line-height: 0.9;
 }
 
-/* ------------------ HOME WRAPPER / CENTERING ------------------ */
+/* ------------------ CENTERED IMAGE ------------------ */
 .home-wrapper {
-  position: absolute;           /* absolute relative to viewport */
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* perfectly center horizontally & vertically */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 500;
 }
 
-/* ------------------ IMAGE ------------------ */
 .image-container {
   width: min(50vw, 550px);
   max-width: 90vw;
@@ -91,13 +97,12 @@ nav a {
 
 .image-container img {
   width: 100%;
-  height: auto;            /* preserve aspect ratio */
+  height: auto;
   max-height: 80vh;
   display: block;
   margin: 0 auto;
 }
 
-/* ------------------ EST TEXT ------------------ */
 .est {
   font-size: 1.3rem;
   opacity: 0.7;
@@ -109,10 +114,6 @@ nav a {
 
 /* ------------------ MOBILE ------------------ */
 @media (max-width: 768px) {
-  .left-column {
-    position: absolute;
-  }
-
   nav a {
     font-size: 2rem;
   }
@@ -120,19 +121,34 @@ nav a {
   .image-container {
     width: 80%;
   }
+
+  .est {
+    font-size: 1rem;
+  }
 }
 </style>
 </head>
 
 <body>
 
-  <div class="home-wrapper">
-    <div class="image-container">
-      <img src="img/SL.Couch.Square.png" alt="Band Photo">
-    </div>
-    <div class="est">est. 2024 ©</div>
-  </div>
+<!-- Background -->
+<div class="hero"></div>
 
+<!-- Sidebar -->
+<div class="left-column">
+  <a href="/index.html" class="logo-link">
+    <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
+  </a>
+  <nav>
+    <a href="/bio.html">BIO</a>
+    <a href="/music.html">MUSIC</a>
+    <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+    <a href="/newsletter.html">NEWSLETTER</a>
+    <a href="/contact.html">CONTACT</a>
+  </nav>
+</div>
+
+<!-- Centered Image -->
 <div class="home-wrapper">
   <div class="image-container">
     <img src="img/SL.Couch.Square.png" alt="Band Photo">
