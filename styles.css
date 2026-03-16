@@ -74,12 +74,14 @@ nav{
 }
 
 nav a{
+  display:inline-block;
   text-decoration:none;
   color:#dbdbdb;
   letter-spacing:1.5px;
   font-family:"Edition", serif;
   font-size:3rem;
   white-space:nowrap;
+  line-height:1.1;
 }
 
 .left-column{
