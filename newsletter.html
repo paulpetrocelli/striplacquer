@@ -1,243 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
-    <style>
-      @font-face {
-        font-family: "Traditional Arabic";
-        src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-          url("fonts/TraditionalArabic.woff") format("woff"),
-          url("fonts/TraditionalArabic.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-      }
 
-      body {
-        margin: 0;
-        font-family: "Traditional Arabic", serif;
-        color: #c9c9c9;
-        background-color: #000;
-      }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      /* Sticky top bar */
-      .top-bar {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 2vw; /* Responsive horizontal padding */
-        z-index: 1000;
-        gap: 2vw; /* Adds flexible space between logo and nav */
-        box-sizing: border-box;
-      }
+<title>NEWSLETTER — Strip Lacquer</title>
 
-      .logo-link {
-        display: inline-block;
-        height: 120px;
-        flex-shrink: 0;
-      }
+<link rel="icon" type="image/x-icon" href="img/favicon9.png">
+<link rel="stylesheet" href="styles.css">
 
-      .site-logo {
-        height: 100%;
-        display: block;
-      }
+</head>
 
-      nav {
-        display: flex;
-        gap: 2vw; /* Spacing between nav items scales with screen */
-        font-size: 1rem;
-        flex-wrap: wrap;
-      }
+<body>
 
-      nav a {
-        text-decoration: none;
-        color: #c9c9c9;
-        font-weight: bold;
-        letter-spacing: 1px;
-        position: relative;
-        font-family: inherit;
-      }
+<div class="left-column">
 
-      nav a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: #c9c9c9;
-        transition: width 0.3s ease;
-      }
+<a href="/index.html" class="logo-link">
+<img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
+class="site-logo"
+alt="Strip Lacquer Logo">
+</a>
 
-      nav a:hover::after {
-        width: 100%;
-      }
+<nav>
+<a href="/bio.html">BIO</a>
+<a href="/music.html">MUSIC</a>
+<a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+<a href="/newsletter.html">NEWSLETTER</a>
+<a href="/contact.html">CONTACT</a>
+</nav>
 
-      /* offset below fixed nav */
-      .banner-offset {
-        height: 32vh;
-      }
+</div>
 
-      .newsletter-container {
-        max-width: 400px;
-        width: 90%;
-        padding: 30px;
-        margin: 0 auto;
-        border: 2px solid #c9c9c9;
-        background: transparent;
-        text-align: center;
-        color: #c9c9c9;
-        box-sizing: border-box;
-      }
 
-      .newsletter-title {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-      }
+<div class="main-content">
 
-      .newsletter-form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
+<div class="newsletter-wrapper">
 
-      .newsletter-form input[type="email"] {
-        padding: 10px;
-        font-size: 1rem;
-        border: 1px solid #c9c9c9;
-        border-radius: 4px;
-        background: transparent;
-        color: #c9c9c9;
-        text-align: center;
-        font-family: "Traditional Arabic", serif;
-        box-sizing: border-box;
-      }
+<div class="newsletter-container">
 
-      .newsletter-form input[type="email"]::placeholder {
-        color: #c9c9c9;
-        opacity: 0.8;
-      }
+<div class="newsletter-title">
+Join the Newsletter
+</div>
 
-      .newsletter-form button {
-        padding: 12px;
-        font-size: 1rem;
-        border: 2px solid #c9c9c9;
-        border-radius: 4px;
-        background: transparent;
-        color: #c9c9c9;
-        cursor: pointer;
-        font-family: "Traditional Arabic", serif;
-        transition: background 0.3s, color 0.3s;
-      }
+<form
+id="newsletterForm"
+action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe"
+method="post"
+class="newsletter-form"
+>
 
-      .newsletter-form button:hover {
-        background: #c9c9c9;
-        color: #000;
-      }
+<input
+type="email"
+name="fields[email]"
+placeholder="enter your email"
+required
+>
 
-      .success-message {
-        font-size: 1.5rem;
-        margin-top: 15px;
-        display: none;
-      }
+<button type="submit">
+Subscribe
+</button>
 
-      @media (max-width: 768px) {
-        .top-bar {
-          flex-direction: column;
-          padding: 0 2vw;
-          top: 2vh;
-        }
-        .logo-link {
-          width: 100;
-        }
-        .site-logo {
-          width: 100%;
-          object-fit: contain;
-        }
-        nav {
-          justify-content: center;
-        }
-        .banner-offset {
-          height: 30vh;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- top nav -->
-    <div class="top-bar">
-      <a href="/index.html" class="logo-link">
-        <img
-          src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
-          class="site-logo"
-          alt="Strip Lacquer Logo"
-        />
-      </a>
-      <nav>
-        <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
-        <a href="/music.html"><span style="white-space: nowrap">◊ MUSIC</span></a>
-        <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">
-          <span style="white-space: nowrap">◊ INSTAGRAM</span>
-        </a>
-        <a href="/newsletter.html"><span style="white-space: nowrap">◊ NEWSLETTER</span></a>
-        <a href="/contact.html"><span style="white-space: nowrap">◊ CONTACT</span></a>
-      </nav>
-    </div>
+</form>
 
-    <!-- offset for fixed nav -->
-    <div class="banner-offset"></div>
+<div id="successMessage" class="success-message">
+Success.
+</div>
 
-    <!-- newsletter content -->
-    <section class="newsletter-container">
-      <h1 class="newsletter-title">Newsletter Sign Up</h1>
-      <form
-        id="newsletterForm"
-        action="https://assets.mailerlite.com/jsonp/1694998/forms/161098802426545939/subscribe"
-        method="post"
-        class="newsletter-form"
-      >
-        <input
-          type="email"
-          name="fields[email]"
-          placeholder="Enter your email"
-          required
-        />
-        <button type="submit">Subscribe</button>
-      </form>
-      <div id="successMessage" class="success-message">Success.</div>
-    </section>
+</div>
 
-    <script>
-      const form = document.getElementById("newsletterForm");
-      const successMessage = document.getElementById("successMessage");
+</div>
 
-      form.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Stop normal form submission
+</div>
 
-        const formData = new FormData(form);
-        const actionUrl = form.getAttribute("action");
 
-        try {
-          const response = await fetch(actionUrl, {
-            method: "POST",
-            body: formData,
-          });
+<script>
 
-          if (response.ok) {
-            form.style.display = "none";
-            successMessage.style.display = "block";
-          } else {
-            alert("There was an issue subscribing. Please try again.");
-          }
-        } catch (error) {
-          alert("Network error. Please try again.");
-        }
-      });
-    </script>
-  </body>
+const form = document.getElementById("newsletterForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", async function(event){
+
+event.preventDefault();
+
+const formData = new FormData(form);
+const actionUrl = form.getAttribute("action");
+
+try{
+
+const response = await fetch(actionUrl,{
+method:"POST",
+body:formData
+});
+
+if(response.ok){
+
+form.style.display="none";
+successMessage.style.display="block";
+
+}else{
+
+alert("There was an issue subscribing. Please try again.");
+
+}
+
+}catch(error){
+
+alert("Network error. Please try again.");
+
+}
+
+});
+
+</script>
+
+</body>
 </html>
+```
