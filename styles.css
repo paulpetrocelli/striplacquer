@@ -264,24 +264,30 @@ nav a{
 
 .bio-section{
   display:flex;
-  gap:5rem;
+  gap:4rem;
   align-items:flex-start;
-  flex-wrap:wrap;
+  max-width:900px;
 }
 
 .bio-text{
-  max-width:500px;
+  flex:1;
   font-size:1.2rem;
   line-height:1.8;
   font-style:italic;
 }
 
+.bio-image{
+  flex-shrink:0;
+}
+
 .bio-image img{
-  width:500px;
+  width:420px;
   max-width:100%;
   height:auto;
-  margin-left:-120px;
+  display:block;
 }
+
+/* MOBILE */
 
 @media (max-width:768px){
 
@@ -291,8 +297,8 @@ nav a{
     text-align:center;
   }
 
-  .bio-image img{
-    margin-left:0;
+  .bio-text{
+    max-width:90%;
   }
 
 }
