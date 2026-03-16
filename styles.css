@@ -267,6 +267,7 @@ nav a{
   gap:4rem;
   align-items:flex-start;
   max-width:900px;
+  margin-top:120px;
 }
 
 .bio-text{
@@ -274,10 +275,11 @@ nav a{
   font-size:1.2rem;
   line-height:1.8;
   font-style:italic;
+  margin-top:120px;
 }
 
 .bio-image img{
-  width:420px;
+  width:380px;
   height:auto;
   display:block;
 }
