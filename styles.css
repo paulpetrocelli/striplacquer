@@ -260,9 +260,9 @@ nav a{
 
 }
 
-/* ------------------ BIO PAGE ------------------ */
+/* BIO PAGE */
 
-.bio-section{
+.bio-wrapper{
   display:flex;
   gap:4rem;
   align-items:flex-start;
@@ -276,29 +276,20 @@ nav a{
   font-style:italic;
 }
 
-.bio-image{
-  flex-shrink:0;
-}
-
 .bio-image img{
   width:420px;
-  max-width:100%;
   height:auto;
   display:block;
 }
 
-/* MOBILE */
+/* mobile */
 
 @media (max-width:768px){
 
-  .bio-section{
+  .bio-wrapper{
     flex-direction:column-reverse;
     align-items:center;
     text-align:center;
-  }
-
-  .bio-text{
-    max-width:90%;
   }
 
 }
