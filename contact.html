@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,48 +5,172 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
+<title>NEWSLETTER — Strip Lacquer</title>
 
 <link rel="icon" type="image/x-icon" href="img/favicon9.png">
-<link rel="stylesheet" href="styles.css">
+<style>
+/* ------------------ GLOBAL RESET ------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/* ------------------ BODY ------------------ */
+body {
+  font-family: "Traditional Arabic", serif;
+  color: #dbdbdb;
+  line-height: 1.5;
+  background-color: #000;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------ BACKGROUND HERO (same as index/bio) ------------------ */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/Texturelabs_LensFX_232XL.jpg");
+  background-size: 80% auto;  /* same as index */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  filter: contrast(110%) brightness(100%);
+  z-index: 0;
+}
+
+/* ------------------ LEFT COLUMN / NAV ------------------ */
+.left-column {
+  position: fixed;
+  top: 25px;
+  left: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.logo-link { display: block; height: 150px; }
+.site-logo { height: 100%; display: block; }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 80px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #dbdbdb;
+  font-family: "Edition", serif;
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  line-height: 0.9;
+}
+
+/* ------------------ CENTERED NEWSLETTER BOX ------------------ */
+.newsletter-wrapper {
+  position: fixed;             /* like home-wrapper / bio-wrapper */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 90vw;
+  z-index: 500;
+  text-align: center;
+}
+
+/* Newsletter box styling */
+.newsletter-box {
+  background-color: rgba(0,0,0,0.6); /* subtle dark overlay */
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  font-family: "Edition", serif;
+  font-size: 1.2rem;
+  color: #dbdbdb;
+}
+
+/* Email input and submit */
+.newsletter-box input[type="email"] {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.newsletter-box button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #dbdbdb;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.newsletter-box button:hover {
+  background-color: #fff;
+}
+
+/* ------------------ MOBILE ------------------ */
+@media (max-width: 768px) {
+  nav a { font-size: 2rem; }
+  .newsletter-box {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<!-- Background -->
+<div class="hero"></div>
+
+<!-- Sidebar -->
 <div class="left-column">
-
-<a href="/index.html" class="logo-link">
-<img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
-class="site-logo"
-alt="Strip Lacquer Logo">
-</a>
-
-<nav>
-<a href="/bio.html">BIO</a>
-<a href="/music.html">MUSIC</a>
-<a href="https://www.instagram.com/striplacquer" target="_blank">INSTAGRAM</a>
-<a href="/newsletter.html">NEWSLETTER</a>
-<a href="/contact.html">CONTACT</a>
-</nav>
-
+  <a href="/index.html" class="logo-link">
+    <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
+         class="site-logo" alt="Strip Lacquer Logo">
+  </a>
+  <nav>
+    <a href="/bio.html">BIO</a>
+    <a href="/music.html">MUSIC</a>
+    <a href="https://www.instagram.com/striplacquer" target="_blank">INSTAGRAM</a>
+    <a href="/newsletter.html">NEWSLETTER</a>
+    <a href="/contact.html">CONTACT</a>
+  </nav>
 </div>
 
-
-<div class="main-content">
-
-<div class="contact-wrapper">
-
-<div class="contact-center">
-
-<div class="contact-email">
-<em>contact@striplacquer.com</em>
-</div>
-
-</div>
-
-</div>
-
+<!-- Centered Newsletter -->
+<div class="newsletter-wrapper">
+  <div class="newsletter-box">
+    <p>Subscribe to our newsletter:</p>
+    <form>
+      <input type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
 </div>
 
 </body>
