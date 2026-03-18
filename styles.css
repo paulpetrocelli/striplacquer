@@ -65,6 +65,8 @@ nav {
   flex-direction: column;
   gap: 1.2rem;
   margin-top: 80px;
+
+  width: max-content;  /* Ensures nav doesn’t stretch */
 }
 
 nav a {
