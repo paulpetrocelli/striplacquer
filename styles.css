@@ -73,7 +73,7 @@ nav {
 }
 
 nav a {
-  display: block;
+  display: inline-block;   /* Only clickable around the text */
   text-decoration: none;
   color: #dbdbdb;
   font-family: "Edition", serif;
