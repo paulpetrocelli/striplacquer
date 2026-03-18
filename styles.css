@@ -24,13 +24,14 @@
   padding: 0;
 }
 
+/* ------------------ BODY ------------------ */
 body {
   font-family: "Traditional Arabic", serif;
   line-height: 1.5;
   color: #dbdbdb;
   background-color: #000;
   background-image: url("img/Texturelabs_LensFX_232XL.jpg");
-  background-size: 90% auto;   /* zoomed out background */
+  background-size: 90% auto;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -62,7 +63,7 @@ body {
 nav {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem; /* vertical spacing */
+  gap: 1.2rem;
   margin-top: 80px;
 }
 
@@ -77,36 +78,34 @@ nav a {
   line-height: 0.9;
 }
 
-/* ------------------ HOME WRAPPER / CENTERED IMAGE ------------------ */
+/* ------------------ HOME WRAPPER ------------------ */
 .home-wrapper {
-  position: fixed;          /* stay relative to viewport */
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* perfect center */
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   z-index: 500;
-  width: 100%;              /* allow image scaling */
+  width: 100%;
   height: 100%;
 }
 
-/* Image container */
 .image-container {
-  width: min(50vw, 550px);   /* responsive width */
+  width: min(50vw, 550px);
   max-width: 90vw;
 }
 
 .image-container img {
   width: 100%;
-  height: auto;             /* maintain aspect ratio */
-  max-height: 80vh;         /* scale with viewport */
+  height: auto;
+  max-height: 80vh;
   display: block;
   margin: 0 auto;
 }
 
-/* est text below image */
 .est {
   font-size: 1.3rem;
   opacity: 0.7;
@@ -116,28 +115,107 @@ nav a {
   margin-top: 1rem;
 }
 
-/* ------------------ MOBILE ------------------ */
-@media (max-width: 768px) {
-  .image-container {
-    width: 80%;            /* shrink on smaller screens */
-  }
-
-  .est {
-    font-size: 1rem;
-  }
+/* ------------------ MUSIC PAGE ------------------ */
+.music-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  z-index: 500;
 }
 
-/* Horizontal row for bio content */
+/* BUTTON COLUMN */
+.music-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* BUTTON STYLE WITH HOVER ANIMATION */
+.music-links a {
+  width: 230px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  text-decoration: none;
+  color: #dbdbdb;
+  border: 1px solid #dbdbdb;
+
+  font-family: "Edition", serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Pseudo-element for animated hover fill */
+.music-links a::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dbdbdb;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+/* Ensure text and icons stay above hover overlay */
+.music-links a * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease, filter 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.music-links a:hover::before {
+  transform: scaleX(1);
+}
+
+.music-links a:hover {
+  color: #000;
+  border-color: #dbdbdb;
+}
+
+.music-links a:hover img {
+  filter: invert(1);
+}
+
+/* IMAGE */
+.music-image {
+  width: min(50vw, 550px);
+  max-width: 90vw;
+}
+
+.music-image img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  display: block;
+}
+
+/* ------------------ BIO ------------------ */
 .bio-container-row {
   display: flex;
   flex-direction: row;
-  align-items: center;    /* vertical alignment */
+  align-items: center;
   gap: 3rem;
   max-width: 1000px;
   width: 100%;
 }
 
-/* Bio text */
 .bio-text {
   flex: 1;
   font-size: 1.2rem;
@@ -145,22 +223,22 @@ nav a {
   font-style: italic;
 }
 
-/* Bio image */
 .bio-image {
   flex-shrink: 0;
-  width: min(45vw, 500px);  /* responsive like index image */
+  width: min(45vw, 500px);
 }
 
 .bio-image img {
   width: 100%;
-  height: auto;            /* maintain ratio */
-  max-height: 80vh;        /* prevent overflow */
+  height: auto;
+  max-height: 80vh;
   display: block;
   object-fit: contain;
 }
 
 /* ------------------ MOBILE ------------------ */
 @media (max-width: 768px) {
+
   .left-column {
     position: absolute;
   }
@@ -173,6 +251,19 @@ nav a {
     padding-left: 6vw;
   }
 
+  .music-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .music-links a {
+    width: 200px;
+  }
+
+  .image-container {
+    width: 80%;
+  }
+
   .bio-container-row {
     flex-direction: column;
     align-items: center;
@@ -182,5 +273,9 @@ nav a {
 
   .bio-image {
     width: 80%;
+  }
+
+  .est {
+    font-size: 1rem;
   }
 }

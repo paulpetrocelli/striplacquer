@@ -1,273 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon9.png" />
 
-    <style>
-      @font-face {
-        font-family: "Traditional Arabic";
-        src: url("fonts/TraditionalArabic.woff2") format("woff2"),
-          url("fonts/TraditionalArabic.woff") format("woff"),
-          url("fonts/TraditionalArabic.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-      }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑹 — MUSIC</title>
+<link rel="icon" type="image/x-icon" href="img/favicon9.png">
 
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
+<style>
+/* ------------------ RESET ------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-      html {
-        font-size: 16px;
-      }
+/* ------------------ BODY ------------------ */
+body {
+  font-family: "Traditional Arabic", serif;
+  color: #dbdbdb;
+  background-color: #000;
+  overflow-x: hidden;
+}
 
-      body {
-        margin: 0;
-        background-color: #000;
-        color: #c9c9c9;
-        font-family: "Traditional Arabic", serif;
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
-      }
+/* ------------------ BACKGROUND ------------------ */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/Texturelabs_LensFX_232XL.jpg");
+  background-size: 80% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  filter: contrast(110%) brightness(100%);
+  z-index: 0;
+}
 
-      h1,
-      h2,
-      nav a,
-      .link-button {
-        font-family: "Traditional Arabic", serif;
-      }
+/* ------------------ LEFT NAV ------------------ */
+.left-column {
+  position: fixed;
+  top: 25px;
+  left: 2vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
 
-      .top-bar {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 2vw;
-        z-index: 1000;
-        gap: 2vw;
-        box-sizing: border-box;
-      }
+.logo-link {
+  height: 150px;
+}
 
-      .logo-link {
-        display: inline-block;
-        height: 120px;
-        flex-shrink: 0;
-      }
+.site-logo {
+  height: 100%;
+}
 
-      .site-logo {
-        height: 100%;
-        display: block;
-      }
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 80px;
+}
 
-      nav {
-        display: flex;
-        gap: 2vw;
-        font-size: 1rem;
-        flex-wrap: wrap;
-      }
+nav a {
+  text-decoration: none;
+  color: #dbdbdb;
+  font-family: "Edition", serif;
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  line-height: 0.9;
+}
 
-      nav a {
-        text-decoration: none;
-        color: #c9c9c9;
-        font-weight: bold;
-        letter-spacing: 1px;
-        position: relative;
-      }
+/* ------------------ MAIN LAYOUT ------------------ */
+.music-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  z-index: 500;
+}
 
-      nav a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        left: 0;
-        bottom: -4px;
-        background-color: #c9c9c9;
-        transition: width 0.3s ease;
-      }
+/* ------------------ MUSIC BUTTONS ------------------ */
+.music-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-      nav a:hover::after {
-        width: 100%;
-      }
+.music-links a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 230px;
+  height: 52px;
 
-      .banner-offset {
-        height: 105px;
-      }
+  color: #dbdbdb;
+  border: 1px solid #dbdbdb;
+  font-family: "Edition", serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-decoration: none;
 
-      .music-links {
-        padding: 0.5rem 2rem 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #000;
-        min-height: calc(100vh - 180px);
-      }
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
 
-      .music-container {
-        display: flex;
-        flex-direction: row;
-        gap: 5rem;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        width: 100%;
-      }
+/* Pseudo-element for animated hover fill */
+.music-links a::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dbdbdb;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
 
-      .button-group {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        max-width: 300px;
-      }
+/* Bring text and icon above overlay */
+.music-links a * {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease, filter 0.3s ease;
+}
 
-      .button-group h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: #c9c9c9;
-      }
+/* Hover state */
+.music-links a:hover::before {
+  transform: scaleX(1);
+}
 
-      .link-button {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        background-color: transparent;
-        border: 2px solid #c9c9c9;
-        color: #c9c9c9;
-        font-size: 1.1rem;
-        padding: 0.6rem 1.3rem;
-        text-decoration: none;
-        font-family: "Traditional Arabic", serif;
-        border-radius: 0;
-        transition: all 0.3s ease;
-        justify-content: center;
-      }
+.music-links a:hover {
+  color: #000;
+  border-color: #dbdbdb;
+}
 
-      .link-button:hover {
-        background-color: #c9c9c9;
-        color: #000;
-      }
+.music-links a:hover img {
+  filter: invert(1);
+}
 
-      .link-button:hover .icon {
-        filter: invert(0);
-      }
+/* ------------------ SVG ICONS ------------------ */
+.music-links img {
+  height: 18px;
+  width: 18px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
 
-      .icon {
-        width: 22px;
-        height: 22px;
-        filter: brightness(0) saturate(100%) invert(78%) sepia(19%)
-          saturate(746%) hue-rotate(304deg) brightness(93%) contrast(89%);
-        transition: filter 0.3s ease;
-      }
+/* ------------------ IMAGE ------------------ */
+.music-image {
+  width: min(50vw, 550px);
+  max-width: 90vw;
+}
 
-      .image-box img {
-        width: 352px;
-        max-width: 100%;
-        height: auto;
-        border-radius: 0;
-        box-shadow: none;
-      }
+.music-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-      @media (max-width: 768px) {
-        .top-bar {
-          flex-direction: column;
-          padding: 0 2vw;
-          top: 2vh;
-        }
-        .logo-link {
-          width: 100;
-        }
-        .site-logo {
-          width: 100%;
-          object-fit: contain;
-        }
-        nav {
-          justify-content: center;
-        }
-        .banner-offset {
-          height: 35vh;
-        }
-        .music-container {
-          flex-direction: column-reverse;
-        }
-      }
-    </style>
-  </head>
+/* ------------------ MOBILE ------------------ */
+@media (max-width: 768px) {
+  .music-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-  <body>
-    <!-- Top bar -->
-    <div class="top-bar">
-      <a href="/index.html" class="logo-link">
-        <img
-          src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png"
-          class="site-logo"
-          alt="Strip Lacquer Logo"
-        />
-      </a>
-      <nav>
-        <a href="/bio.html"><span style="white-space: nowrap">◊ BIO</span></a>
-        <a href="/music.html"
-          ><span style="white-space: nowrap">◊ MUSIC</span></a
-        >
-        <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">
-          <span style="white-space: nowrap">◊ INSTAGRAM</span>
-        </a>        
-        <a href="/newsletter.html"
-          ><span style="white-space: nowrap">◊ NEWSLETTER</span></a
-        >
-        <a href="/contact.html"
-          ><span style="white-space: nowrap">◊ CONTACT</span></a
-        >
-      </nav>
-    </div>
+  .music-links a {
+    width: 200px;
+  }
 
-    <div class="banner-offset"></div>
+  nav a {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
 
-    <!-- Main music content -->
-    <main class="music-links">
-      <div class="music-container">
-        <div class="button-group">
-          <h2><em>Listen to Strip Lacquer ~</em></h2>
+<body>
 
-          <a
-            href="https://striplacquer.bandcamp.com/"
-            class="link-button"
-            target="_blank"
-          >
-            <img src="img/bandcamp.svg" class="icon" alt="Bandcamp logo" />
-            Bandcamp
-          </a>
+<div class="hero"></div>
 
-          <a
-            href="https://www.youtube.com/@striplacquer"
-            class="link-button"
-            target="_blank"
-          >
-            <img src="img/youtube.svg" class="icon" alt="YouTube logo" />
-            YouTube
-          </a>
+<div class="left-column">
+  <a href="/index.html" class="logo-link">
+    <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo">
+  </a>
 
-          <a
-            href="https://soundcloud.com/strip-lacquer"
-            class="link-button"
-            target="_blank"
-          >
-            <img src="img/soundcloud.svg" class="icon" alt="SoundCloud logo" />
-            SoundCloud
-          </a>
-        </div>
+  <nav>
+    <a href="/bio.html">BIO</a>
+    <a href="/music.html">MUSIC</a>
+    <a href="https://www.instagram.com/striplacquer" target="_blank">INSTAGRAM</a>
+    <a href="/newsletter.html">NEWSLETTER</a>
+    <a href="/contact.html">CONTACT</a>
+  </nav>
+</div>
 
-        <div class="image-box">
-          <img src="img/temporary tapes.jpg" alt="Tape photo" />
-        </div>
-      </div>
-    </main>
-  </body>
+<!-- CONTENT -->
+<div class="music-wrapper">
+
+  <!-- BUTTONS -->
+  <div class="music-links">
+
+    <a href="https://striplacquer.bandcamp.com/" target="_blank">
+      <img src="img/bandcamp.svg" alt="">
+      BANDCAMP
+    </a>
+
+    <a href="https://www.youtube.com/" target="_blank">
+      <img src="img/youtube.svg" alt="">
+      YOUTUBE
+    </a>
+
+    <a href="https://soundcloud.com/" target="_blank">
+      <img src="img/soundcloud.svg" alt="">
+      SOUNDCLOUD
+    </a>
+
+  </div>
+
+  <!-- IMAGE -->
+  <div class="music-image">
+    <img src="img/temporary tapes.jpg" alt="Music Artwork">
+  </div>
+
+</div>
+
+</body>
 </html>
