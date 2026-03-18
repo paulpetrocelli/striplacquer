@@ -50,6 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  width: max-content; /* Only enough for logo + nav text */
 }
 
 .logo-link {
@@ -68,12 +69,14 @@ nav {
 }
 
 nav a {
+  display: inline-block;       /* Only the text is clickable now */
   text-decoration: none;
   color: #dbdbdb;
   font-family: "Edition", serif;
   font-size: 3rem;
   letter-spacing: 1.5px;
   line-height: 0.9;
+  white-space: nowrap;
 }
 
 /* ------------------ MAIN LAYOUT ------------------ */
