@@ -23,23 +23,13 @@ body {
   color: #dbdbdb;
   background-color: #000;
   overflow-x: hidden;
-}
-
-/* ------------------ BACKGROUND ------------------ */
-.hero {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
   background-image: url("img/Texturelabs_LensFX_232XL.jpg");
-  background-size: 80% auto;
+  background-size: 90% auto;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: screen;
   filter: contrast(110%) brightness(100%);
-  z-index: 0;
 }
 
 /* ------------------ LEFT NAV ------------------ */
@@ -49,16 +39,20 @@ body {
   left: 2vw;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   z-index: 1000;
-  width: max-content; /* Only enough for logo + nav text */
+  width: fit-content; /* Only as wide as content */
+  pointer-events: auto;
 }
 
 .logo-link {
+  display: inline-block; /* Only image clickable */
   height: 150px;
 }
 
 .site-logo {
   height: 100%;
+  display: block;
 }
 
 nav {
@@ -66,10 +60,11 @@ nav {
   flex-direction: column;
   gap: 1.2rem;
   margin-top: 80px;
+  width: fit-content; /* Only as wide as links */
 }
 
 nav a {
-  display: inline-block;       /* Only the text is clickable now */
+  display: inline-block; /* Only the text is clickable */
   text-decoration: none;
   color: #dbdbdb;
   font-family: "Edition", serif;
@@ -79,7 +74,7 @@ nav a {
   white-space: nowrap;
 }
 
-/* ------------------ MAIN LAYOUT ------------------ */
+/* ------------------ MUSIC PAGE ------------------ */
 .music-wrapper {
   position: fixed;
   top: 50%;
@@ -99,26 +94,24 @@ nav a {
 }
 
 .music-links a {
-  position: relative;
+  width: 230px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  width: 230px;
-  height: 52px;
-
   color: #dbdbdb;
   border: 1px solid #dbdbdb;
   font-family: "Edition", serif;
   font-size: 1.2rem;
   letter-spacing: 1px;
   text-decoration: none;
-
+  position: relative;
   overflow: hidden;
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Pseudo-element for animated hover fill */
+/* Animated hover overlay */
 .music-links a::before {
   content: '';
   position: absolute;
@@ -132,14 +125,13 @@ nav a {
   z-index: 0;
 }
 
-/* Bring text and icon above overlay */
+/* Keep text and icon above overlay */
 .music-links a * {
   position: relative;
   z-index: 1;
   transition: color 0.3s ease, filter 0.3s ease;
 }
 
-/* Hover state */
 .music-links a:hover::before {
   transform: scaleX(1);
 }
@@ -170,6 +162,7 @@ nav a {
 .music-image img {
   width: 100%;
   height: auto;
+  max-height: 80vh;
   display: block;
 }
 
