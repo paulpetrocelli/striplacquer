@@ -48,6 +48,9 @@ body {
   flex-direction: column;
   align-items: flex-start;
   z-index: 1000;
+
+  width: max-content;        /* Prevents clickable area from stretching */
+  pointer-events: auto;      /* Ensures only visible area is clickable */
 }
 
 .logo-link {
