@@ -17,19 +17,24 @@
   padding: 0;
 }
 
-/* ------------------ BODY ------------------ */
+/* ------------------ BODY / BACKGROUND ------------------ */
 body {
   font-family: "Traditional Arabic", serif;
   color: #dbdbdb;
   background-color: #000;
-  overflow-x: hidden;
   background-image: url("img/Texturelabs_LensFX_232XL.jpg");
-  background-size: 90% auto;
+  background-size: 80% auto;         /* gold standard size */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: screen;
   filter: contrast(110%) brightness(100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* ------------------ LEFT NAV ------------------ */
@@ -41,12 +46,11 @@ body {
   flex-direction: column;
   align-items: flex-start;
   z-index: 1000;
-  width: fit-content; /* Only as wide as content */
-  pointer-events: auto;
+  width: fit-content; /* only as wide as content */
 }
 
 .logo-link {
-  display: inline-block; /* Only image clickable */
+  display: inline-block;
   height: 150px;
 }
 
@@ -60,11 +64,11 @@ nav {
   flex-direction: column;
   gap: 1.2rem;
   margin-top: 80px;
-  width: fit-content; /* Only as wide as links */
+  width: fit-content;
 }
 
 nav a {
-  display: inline-block; /* Only the text is clickable */
+  display: inline-block; /* only the text is clickable */
   text-decoration: none;
   color: #dbdbdb;
   font-family: "Edition", serif;
@@ -74,12 +78,8 @@ nav a {
   white-space: nowrap;
 }
 
-/* ------------------ MUSIC PAGE ------------------ */
-.music-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* ------------------ MUSIC CONTAINER ------------------ */
+.music-container {
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -111,7 +111,7 @@ nav a {
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Animated hover overlay */
+/* Hover overlay effect */
 .music-links a::before {
   content: '';
   position: absolute;
@@ -125,7 +125,6 @@ nav a {
   z-index: 0;
 }
 
-/* Keep text and icon above overlay */
 .music-links a * {
   position: relative;
   z-index: 1;
@@ -145,7 +144,6 @@ nav a {
   filter: invert(1);
 }
 
-/* ------------------ SVG ICONS ------------------ */
 .music-links img {
   height: 18px;
   width: 18px;
@@ -153,7 +151,7 @@ nav a {
   transition: filter 0.3s ease;
 }
 
-/* ------------------ IMAGE ------------------ */
+/* ------------------ MUSIC IMAGE ------------------ */
 .music-image {
   width: min(50vw, 550px);
   max-width: 90vw;
@@ -166,9 +164,9 @@ nav a {
   display: block;
 }
 
-/* ------------------ MOBILE ------------------ */
+/* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
-  .music-wrapper {
+  .music-container {
     flex-direction: column;
     gap: 2rem;
   }
@@ -180,13 +178,15 @@ nav a {
   nav a {
     font-size: 2rem;
   }
+
+  .music-image {
+    width: 80%;
+  }
 }
 </style>
 </head>
 
 <body>
-
-<div class="hero"></div>
 
 <div class="left-column">
   <a href="/index.html" class="logo-link">
@@ -202,34 +202,22 @@ nav a {
   </nav>
 </div>
 
-<!-- CONTENT -->
-<div class="music-wrapper">
-
-  <!-- BUTTONS -->
+<div class="music-container">
   <div class="music-links">
-
     <a href="https://striplacquer.bandcamp.com/" target="_blank">
-      <img src="img/bandcamp.svg" alt="">
-      BANDCAMP
+      <img src="img/bandcamp.svg" alt="">BANDCAMP
     </a>
-
     <a href="https://www.youtube.com/@striplacquer" target="_blank">
-      <img src="img/youtube.svg" alt="">
-      YOUTUBE
+      <img src="img/youtube.svg" alt="">YOUTUBE
     </a>
-
     <a href="https://soundcloud.com/strip-lacquer" target="_blank">
-      <img src="img/soundcloud.svg" alt="">
-      SOUNDCLOUD
+      <img src="img/soundcloud.svg" alt="">SOUNDCLOUD
     </a>
-
   </div>
 
-  <!-- IMAGE -->
   <div class="music-image">
     <img src="img/temporary tapes.jpg" alt="Music Artwork">
   </div>
-
 </div>
 
 </body>
