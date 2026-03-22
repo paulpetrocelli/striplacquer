@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
+  <title>CONTACT — Strip Lacquer</title>
   <link rel="icon" type="image/x-icon" href="img/favicon9.png">
 
   <!-- LINK YOUR STYLESHEET -->
@@ -30,29 +30,20 @@
 
   <!-- Centered Contact Email -->
   <div class="home-wrapper">
-    <div class="contact-container">
-      <p class="contact-email">contact@striplacquer.com</p>
-    </div>
+    <p class="contact-email">contact@striplacquer.com</p>
   </div>
 
   <style>
-    /* Keep the home-wrapper layout identical to index page */
+    /* Center the email exactly in the viewport */
     .home-wrapper {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      align-items: center;       /* vertical center */
+      justify-content: center;   /* horizontal center */
       height: 100vh;
       width: 100%;
       text-align: center;
       position: relative;
-      z-index: 10; /* higher than background but below sidebar */
-    }
-
-    /* Container for email with higher z-index to allow highlighting */
-    .contact-container {
-      position: relative;
-      z-index: 100; /* ensures text sits above everything visually */
+      z-index: 10; /* above background */
     }
 
     /* Email styling */
@@ -60,10 +51,11 @@
       font-family: "Edition", serif;
       font-size: 6rem;
       color: #dbdbdb;
-      user-select: text; /* fully highlightable */
+      user-select: text;       /* fully highlightable */
       cursor: text;
+      margin: 0;               /* remove extra spacing */
       line-height: 1.2;
-      margin: 0;
+      z-index: 100;            /* ensure it sits above everything visually */
     }
 
     /* Mobile adjustments */
