@@ -28,36 +28,37 @@
     </nav>
   </div>
 
-  <!-- Centered Contact Text -->
+  <!-- Centered Contact Email -->
   <div class="home-wrapper">
-    <div class="contact-text">
-      <p>contact@striplacquer.com</p>
-    </div>
-    <div class="est">est. 2024 ©</div>
+    <p class="contact-email">contact@striplacquer.com</p>
   </div>
 
   <style>
-    /* Ensure the contact text is centered and highlightable */
+    /* Center wrapper and make email fixed in the middle */
     .home-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
+      width: 100%;
+      z-index: 10;
     }
 
-    .contact-text p {
+    /* Email styling */
+    .contact-email {
       font-family: "Edition", serif;
-      font-size: 2.5rem;
+      font-size: 4rem;
       color: #dbdbdb;
-      user-select: text; /* allow text to be highlightable */
+      user-select: text; /* fully highlightable */
       cursor: text;
+      line-height: 1.2;
     }
 
+    /* Mobile adjustments */
     @media (max-width: 768px) {
-      .contact-text p {
-        font-size: 1.8rem;
+      .contact-email {
+        font-size: 2.5rem;
       }
     }
   </style>
