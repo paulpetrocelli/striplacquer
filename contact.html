@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
+  <title>CONTACT — Strip Lacquer</title>
   <link rel="icon" type="image/x-icon" href="img/favicon9.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,38 +26,37 @@
     </nav>
   </div>
 
-  <!-- Full-page overlay for email -->
-  <div class="email-overlay">
+  <!-- Centered Email -->
+  <div class="home-wrapper">
     <p class="contact-email">contact@striplacquer.com</p>
   </div>
 
   <style>
-    /* Full-page overlay sits on top of everything */
-    .email-overlay {
+    /* Keep home-wrapper centering exactly like index page */
+    .home-wrapper {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;          /* above everything else */
-      pointer-events: auto;    /* allow interaction with the email */
-      background: transparent; /* no visual obstruction */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
+      z-index: 500; /* below sidebar, above background */
+      width: 100%;
     }
 
-    /* Email styling */
+    /* Email styling: sit visually above page content without blocking sidebar */
     .contact-email {
       font-family: "Edition", serif;
       font-size: 6rem;
       color: #dbdbdb;
+      margin: 0;
+      line-height: 1.2;
       user-select: text;       /* fully highlightable */
       cursor: text;
-      line-height: 1.2;
-      margin: 0;
-      display: inline-block;   /* ensures pointer-events behave correctly */
+      position: relative;
+      z-index: 1500;           /* above background, below sidebar clickable area */
+      display: inline-block;
+      padding: 0 1rem;         /* small buffer to make highlight smoother */
+      background: rgba(0,0,0,0); /* transparent but ensures pointer events hit the text */
     }
 
     /* Mobile adjustments */
