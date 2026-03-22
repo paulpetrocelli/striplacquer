@@ -30,25 +30,31 @@
 
   <!-- Centered Contact Email -->
   <div class="home-wrapper">
-    <p class="contact-email">contact@striplacquer.com</p>
+    <div class="contact-container">
+      <p class="contact-email">contact@striplacquer.com</p>
+    </div>
   </div>
 
   <style>
-    /* Center wrapper and make email fixed in the middle */
+    /* Center the container using flex */
     .home-wrapper {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       width: 100%;
+      text-align: center;
       z-index: 10;
+    }
+
+    .contact-container {
+      display: inline-block;
     }
 
     /* Email styling */
     .contact-email {
       font-family: "Edition", serif;
-      font-size: 4rem;
+      font-size: 5rem; /* bigger for prominence */
       color: #dbdbdb;
       user-select: text; /* fully highlightable */
       cursor: text;
@@ -58,7 +64,7 @@
     /* Mobile adjustments */
     @media (max-width: 768px) {
       .contact-email {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
     }
   </style>
