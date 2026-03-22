@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CONTACT — Strip Lacquer</title>
+  <title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
   <link rel="icon" type="image/x-icon" href="img/favicon9.png">
 
   <!-- LINK YOUR STYLESHEET -->
@@ -34,16 +34,18 @@
   </div>
 
   <style>
-    /* Center the email exactly in the viewport */
+    /* Fixed wrapper fills viewport, independent of sidebar */
     .home-wrapper {
-      display: flex;
-      align-items: center;       /* vertical center */
-      justify-content: center;   /* horizontal center */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
       height: 100vh;
-      width: 100%;
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
+      z-index: 10;             /* above background, below sidebar */
       text-align: center;
-      position: relative;
-      z-index: 10; /* above background */
     }
 
     /* Email styling */
@@ -53,9 +55,9 @@
       color: #dbdbdb;
       user-select: text;       /* fully highlightable */
       cursor: text;
-      margin: 0;               /* remove extra spacing */
+      margin: 0;
       line-height: 1.2;
-      z-index: 100;            /* ensure it sits above everything visually */
+      z-index: 100;            /* sits above everything visually */
     }
 
     /* Mobile adjustments */
