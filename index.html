@@ -2,159 +2,40 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
-<link rel="icon" type="image/x-icon" href="img/favicon9.png">
-<style>
-/* ------------------ GLOBAL RESET ------------------ */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝑺𝑻𝑹𝑰𝑷 𝑳𝑨𝑪𝑸𝑼𝑬𝑹</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon9.png">
 
-/* ------------------ BODY ------------------ */
-body {
-  font-family: "Traditional Arabic", serif;
-  line-height: 1.5;
-  color: #dbdbdb;
-  background-color: #000;
-  overflow-x: hidden;
-}
-
-/* ------------------ BACKGROUND HERO ------------------ */
-.hero {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("img/Texturelabs_LensFX_232XL.jpg");
-  background-size: 80% auto;  /* zoom out the background */
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-blend-mode: screen;
-  filter: contrast(110%) brightness(100%);
-  z-index: 0;
-}
-
-/* ------------------ LEFT COLUMN / NAV ------------------ */
-.left-column {
-  position: fixed;
-  top: 25px;
-  left: 2vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 1000;
-}
-
-.logo-link {
-  display: block;
-  height: 150px;
-}
-
-.site-logo {
-  height: 100%;
-  display: block;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin-top: 80px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #dbdbdb;
-  font-family: "Edition", serif;
-  font-size: 3rem;
-  letter-spacing: 1.5px;
-  white-space: nowrap;
-  line-height: 0.9;
-}
-
-/* ------------------ CENTERED IMAGE ------------------ */
-.home-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 500;
-}
-
-.image-container {
-  width: min(50vw, 550px);
-  max-width: 90vw;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  display: block;
-  margin: 0 auto;
-}
-
-.est {
-  font-size: 1.3rem;
-  opacity: 0.7;
-  letter-spacing: 1px;
-  font-family: "Edition", serif;
-  white-space: nowrap;
-  margin-top: 1rem;
-}
-
-/* ------------------ MOBILE ------------------ */
-@media (max-width: 768px) {
-  nav a {
-    font-size: 2rem;
-  }
-
-  .image-container {
-    width: 80%;
-  }
-
-  .est {
-    font-size: 1rem;
-  }
-}
-</style>
+  <!-- LINK YOUR STYLESHEET -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- Background -->
-<div class="hero"></div>
+  <!-- Sidebar -->
+  <div class="left-column">
+    <a href="/index.html" class="logo-link">
+      <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
+    </a>
 
-<!-- Sidebar -->
-<div class="left-column">
-  <a href="/index.html" class="logo-link">
-    <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer Logo">
-  </a>
-  <nav>
-    <a href="/bio.html">BIO</a>
-    <a href="/music.html">MUSIC</a>
-    <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-    <a href="/newsletter.html">NEWSLETTER</a>
-    <a href="/contact.html">CONTACT</a>
-  </nav>
-</div>
-
-<!-- Centered Image -->
-<div class="home-wrapper">
-  <div class="image-container">
-    <img src="img/SL.Couch.Square.png" alt="Band Photo">
+    <nav>
+      <a href="/bio.html">BIO</a>
+      <a href="/music.html">MUSIC</a>
+      <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+      <a href="/newsletter.html">NEWSLETTER</a>
+      <a href="/contact.html">CONTACT</a>
+    </nav>
   </div>
-  <div class="est">est. 2024 ©</div>
-</div>
+
+  <!-- Centered Image -->
+  <div class="home-wrapper">
+    <div class="image-container">
+      <img src="img/SL.Couch.Square.png" alt="Band Photo">
+    </div>
+    <div class="est">est. 2024 ©</div>
+  </div>
 
 </body>
+
 </html>
