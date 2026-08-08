@@ -65,17 +65,13 @@ body {
 }
 
 .logo-link {
-  position: relative;
   display: inline-block;
   height: 150px;
-  z-index: 9999;
 }
 
 .site-logo {
-  position: relative;
   height: 100%;
   display: block;
-  z-index: 9999;
 }
 
 nav {
@@ -106,15 +102,27 @@ nav a {
   display: flex;
   align-items: center;
   gap: 3rem;
-  z-index: 1000;
-  pointer-events: auto;
+  z-index: 500;
 }
 
 /* ------------------ MUSIC BUTTONS ------------------ */
-.music-links {
+.music-links a {
+  width: 230px;
+  height: 52px;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #dbdbdb;
+  border: 1px solid #dbdbdb;
+  font-family: "Edition", serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
 .music-links a {
