@@ -20,7 +20,7 @@
     <nav>
       <a href="/bio.html">BIO</a>
       <a href="/music.html">MUSIC</a>
-      <a href="https://www.instagram.com/striplacquer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
       <a href="/newsletter.html">NEWSLETTER</a>
       <a href="/contact.html">CONTACT</a>
     </nav>
@@ -39,8 +39,10 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      z-index: 500; /* below sidebar, above background */
-      width: 100%;
+      z-index: 2000;            /* Brought to absolute front layer */
+      width: auto;              /* Prevents wide invisible box from blocking layout */
+      max-width: 90vw;          /* Keeps container bounded on smaller viewports */
+      pointer-events: none;     /* Allows mouse interactions to pass through container */
     }
 
     /* Email styling: sit visually above page content without blocking sidebar */
@@ -50,13 +52,12 @@
       color: #dbdbdb;
       margin: 0;
       line-height: 1.2;
-      user-select: text;       /* fully highlightable */
+      user-select: text;        /* Standard text selection */
+      -webkit-user-select: text;/* Safari support */
       cursor: text;
-      position: relative;
-      z-index: 1500;           /* above background, below sidebar clickable area */
+      pointer-events: auto;     /* Re-enables text highlight inside container */
       display: inline-block;
-      padding: 0 1rem;         /* small buffer to make highlight smoother */
-      background: rgba(0,0,0,0); /* transparent but ensures pointer events hit the text */
+      padding: 0 1rem;          /* Small buffer to make highlight smoother */
     }
 
     /* Mobile adjustments */
