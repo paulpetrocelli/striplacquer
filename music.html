@@ -62,11 +62,13 @@ body {
   align-items: flex-start;
   z-index: 2000;
   width: max-content;
+  pointer-events: none; /* Stops the sidebar footprint from blocking center content */
 }
 
 .logo-link {
   display: inline-block;
   height: 150px;
+  pointer-events: auto; /* Keeps the logo clickable */
 }
 
 .site-logo {
@@ -91,6 +93,7 @@ nav a {
   letter-spacing: 1.5px;
   white-space: nowrap;
   line-height: 0.9;
+  pointer-events: auto; /* Keeps the menu links clickable */
 }
 
 /* ------------------ MUSIC CENTER CONTAINER ------------------ */
