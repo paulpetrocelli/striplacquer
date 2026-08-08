@@ -60,7 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 1000;
+  z-index: 2000;
   width: max-content;
 }
 
@@ -102,27 +102,15 @@ nav a {
   display: flex;
   align-items: center;
   gap: 3rem;
-  z-index: 500;
+  z-index: 1000;
+  pointer-events: auto;
 }
 
 /* ------------------ MUSIC BUTTONS ------------------ */
-.music-links a {
-  width: 230px;
-  height: 52px;
+.music-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: #dbdbdb;
-  border: 1px solid #dbdbdb;
-  font-family: "Edition", serif;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s ease, border-color 0.3s ease;
-  cursor: pointer;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .music-links a {
