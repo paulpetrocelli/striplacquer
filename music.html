@@ -52,6 +52,25 @@ body {
   position: relative;
 }
 
+/* ------------------ TAPE IMAGE LAYER ------------------ */
+.tape-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(50vw, 550px);
+  max-width: 90vw;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tape-background img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  display: block;
+}
+
 /* ------------------ LEFT COLUMN / NAV ------------------ */
 .left-column {
   position: fixed;
@@ -60,7 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  z-index: 1000;
+  z-index: 100;
   width: max-content;
 }
 
@@ -93,7 +112,7 @@ nav a {
   line-height: 0.9;
 }
 
-/* ------------------ MUSIC CENTER CONTAINER ------------------ */
+/* ------------------ MUSIC BUTTONS ------------------ */
 .music-container {
   position: fixed;
   top: 50%;
@@ -101,12 +120,10 @@ nav a {
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  gap: 3rem;
-  z-index: 1000;
-  pointer-events: auto;
+  justify-content: center;
+  z-index: 10;
 }
 
-/* ------------------ MUSIC BUTTONS ------------------ */
 .music-links {
   display: flex;
   flex-direction: column;
@@ -114,7 +131,6 @@ nav a {
 }
 
 .music-links a {
-  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -129,58 +145,38 @@ nav a {
   border: 1px solid #dbdbdb;
   background: transparent;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  z-index: 1000;
-  pointer-events: auto;
+  transition: background-color .3s ease, color .3s ease;
 }
 
-/* Hover effect without enlarging the button */
 .music-links a:hover {
-  background-color: #dbdbdb;
+  background: #dbdbdb;
   color: #000;
 }
 
 .music-links a img {
-  height: 18px;
   width: 18px;
+  height: 18px;
   object-fit: contain;
   filter: invert(1);
-  transition: filter 0.3s ease;
+  transition: filter .3s ease;
 }
 
 .music-links a:hover img {
   filter: invert(0);
 }
 
-/* ------------------ MUSIC IMAGE ------------------ */
-.music-image {
-  width: min(50vw, 550px);
-  max-width: 90vw;
-}
-
-.music-image img {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  display: block;
-}
-
 /* ------------------ MOBILE ------------------ */
-@media (max-width: 768px) {
-  .music-links a {
-    width: 200px;
-  }
+@media (max-width:768px) {
 
   nav a {
     font-size: 2rem;
   }
 
-  .music-container {
-    flex-direction: column;
-    gap: 2rem;
+  .music-links a {
+    width: 200px;
   }
 
-  .music-image {
+  .tape-background {
     width: 80%;
   }
 }
@@ -189,9 +185,13 @@ nav a {
 
 <body>
 
+<div class="tape-background">
+  <img src="img/temporary tapes.jpg" alt="Music Artwork">
+</div>
+
 <div class="left-column">
   <a href="/index.html" class="logo-link">
-    <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo">
+    <img src="img/SL.TextLogo.2.Horizontal.WhiteBorder(Size3).png" class="site-logo" alt="Strip Lacquer">
   </a>
 
   <nav>
@@ -209,18 +209,16 @@ nav a {
       <img src="img/bandcamp.svg" alt="">
       BANDCAMP
     </a>
+
     <a href="https://www.youtube.com/@striplacquer" target="_blank">
       <img src="img/youtube.svg" alt="">
       YOUTUBE
     </a>
+
     <a href="https://soundcloud.com/strip-lacquer" target="_blank">
       <img src="img/soundcloud.svg" alt="">
       SOUNDCLOUD
     </a>
-  </div>
-
-  <div class="music-image">
-    <img src="img/temporary tapes.jpg" alt="Music Artwork">
   </div>
 </div>
 
